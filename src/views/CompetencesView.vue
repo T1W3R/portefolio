@@ -1,53 +1,38 @@
 <template>
-  <section
-    class="site-hero site-hero--compact site-hero--skills-accent"
-    aria-labelledby="skills-hero-title"
-    role="banner"
+  <StandardPageHero
+    title-id="skills-hero-title"
+    kicker="Savoir-faire"
+    :title-lines="['Compétences']"
+    tagline="Technique, relationnel et langues : une vision rapide des outils que j’utilise et de ma manière de travailler."
+    accent-class="site-hero--skills-accent"
   >
-    <div class="site-hero__inner site-hero__inner--solo">
-      <div class="site-hero__left">
-        <p class="site-hero__kicker">Savoir-faire</p>
-        <p class="site-hero__name">Portfolio</p>
-        <h1 id="skills-hero-title" class="site-hero__display">
-          <span class="site-hero__display-line">Compétences</span>
-        </h1>
-        <p class="site-hero__tagline">
-          Technique, relationnel et langues : une vision rapide des outils que j’utilise
-          et de ma manière de travailler.
-        </p>
-        <div class="site-hero__actions">
-          <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-          <router-link class="btn btn--ghost" to="/a-propos">A propos de moi</router-link>
-        </div>
-      </div>
-    </div>
-  </section>
+    <template #actions>
+      <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
+      <router-link class="btn btn--ghost" to="/a-propos">A propos de moi</router-link>
+    </template>
+  </StandardPageHero>
 
-  <section class="home-intro-band skills-page__stripe" aria-labelledby="skills-stripe-title">
-    <div class="home-intro-band__inner">
-      <h2 id="skills-stripe-title" class="home-intro-band__head">Ce que j’apporte</h2>
-      <div class="skills-page__stripe-body">
-        <div class="home-intro-band__inset">
-          <p class="home-intro-band__p">
-            Stack orientée produit, collaboration d’équipe et socle en data/IA : la section
-            ci-dessous va du concret (outils) au contexte (langues, soft skills).
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <IntroBandSection
+    title-id="skills-stripe-title"
+    title="Ce que j’apporte"
+    stripe-class="skills-page__stripe"
+    body-class="skills-page__stripe-body"
+  >
+    <p class="home-intro-band__p">
+      Stack orientée produit, collaboration d’équipe et socle en data/IA : la section
+      ci-dessous va du concret (outils) au contexte (langues, soft skills).
+    </p>
+  </IntroBandSection>
 
   <main class="main" id="main">
     <div class="main__inner main__inner__personalized main__inner--skills">
       <section class="section section--tint section--skills-board" aria-labelledby="skills-board-title">
-        <div class="section__head section__head--explore">
-          <span class="section__eyebrow">Détails</span>
-          <h2 class="section__title" id="skills-board-title">Stack &amp; profil</h2>
-          <p class="section__lede">
-            Une lecture rapide des outils techniques, des qualités de collaboration et des
-            langues utilisées dans mes projets.
-          </p>
-        </div>
+        <SectionHeadBlock
+          title-id="skills-board-title"
+          eyebrow="Détails"
+          title="Stack &amp; profil"
+          lede="Une lecture rapide des outils techniques, des qualités de collaboration et des langues utilisées dans mes projets."
+        />
 
         <div class="bento">
         <div class="bento__item bento__item--wide">
@@ -102,15 +87,23 @@
       </div>
       </section>
 
-      <nav class="subnav" aria-label="Pages liées">
-        <router-link to="/formations">← Formations</router-link>
-        <router-link to="/contact">Contact →</router-link>
-      </nav>
+      <PageSubnav
+        aria-label="Pages liées"
+        prev-to="/formations"
+        prev-label="← Formations"
+        next-to="/contact"
+        next-label="Contact →"
+      />
     </div>
   </main>
 </template>
 
 <script setup>
+import IntroBandSection from "@/components/IntroBandSection.vue";
+import PageSubnav from "@/components/PageSubnav.vue";
+import SectionHeadBlock from "@/components/SectionHeadBlock.vue";
+import StandardPageHero from "@/components/StandardPageHero.vue";
+
 const stack = [
   { name: "Java", img: "/images/java.png" },
   { name: "Spring Boot", img: "/images/Spring_Boot.png" },

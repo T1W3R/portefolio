@@ -130,12 +130,11 @@
         id="explore"
         aria-labelledby="explore-title"
       >
-        <div class="section__head section__head--explore">
-          <h2 class="section__title" id="explore-title">Explorer le portefolio</h2>
-          <p class="section__lede">
-            Rubriques modulaires — un peu comme un tableau de bord éditorial.
-          </p>
-        </div>
+        <SectionHeadBlock
+          title-id="explore-title"
+          title="Explorer le portefolio"
+          lede="Rubriques modulaires — un peu comme un tableau de bord éditorial."
+        />
         <ul class="home-bento" role="list">
           <li class="home-bento__cell home-bento__cell--about">
             <router-link to="/a-propos" class="home-bento__card home-bento__card--tall">
@@ -203,6 +202,7 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
+import SectionHeadBlock from "@/components/SectionHeadBlock.vue";
 
 /** Remplis automatiquement si vous ajoutez public/images/hero-portrait.jpg */
 const heroPortraitSrc = ref("images/front_image.png ");

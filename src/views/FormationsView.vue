@@ -1,52 +1,39 @@
 <template>
-  <section
-    class="site-hero site-hero--compact site-hero--formations-accent"
-    aria-labelledby="form-hero-title"
-    role="banner"
+  <StandardPageHero
+    title-id="form-hero-title"
+    kicker="Cursus"
+    :title-lines="['Formations']"
+    tagline="Du bac au MSc — sciences, développement, puis data &amp; IA. Les détails du programme sont sur les sites des établissements ; les liens ci-dessous renvoient vers les bons angles."
+    accent-class="site-hero--formations-accent"
   >
-    <div class="site-hero__inner site-hero__inner--solo">
-      <div class="site-hero__left">
-        <p class="site-hero__kicker">Cursus</p>
-        <p class="site-hero__name">Portfolio</p>
-        <h1 id="form-hero-title" class="site-hero__display">
-          <span class="site-hero__display-line">Formations</span>
-        </h1>
-        <p class="site-hero__tagline">
-          Du bac au MSc — sciences, développement, puis data &amp; IA. Les détails du programme sont sur les sites des établissements ; les liens ci-dessous renvoient vers les bons angles.
-        </p>
-        <div class="site-hero__actions">
-          <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-          <router-link class="btn btn--ghost" to="/competences">Mes compétences</router-link>
-        </div>
-      </div>
-    </div>
-  </section>
+    <template #actions>
+      <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
+      <router-link class="btn btn--ghost" to="/competences">Mes compétences</router-link>
+    </template>
+  </StandardPageHero>
 
-  <section class="home-intro-band formations-page__stripe" aria-labelledby="form-stripe-title">
-    <div class="home-intro-band__inner">
-      <h2 id="form-stripe-title" class="home-intro-band__head">Un fil continu</h2>
-      <div class="formations-page__stripe-body">
-        <div class="home-intro-band__inset">
-          <p class="home-intro-band__p">
-            Chaque carte associe un lieu (photo du secteur ou du cadre), les infos qui restent sur votre CV,
-            et deux sorties&nbsp;: la <strong>fiche formation</strong> pour le contenu pédagogique, le
-            <strong>site de l’école</strong> pour le campus et les admissions.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <IntroBandSection
+    title-id="form-stripe-title"
+    title="Un fil continu"
+    stripe-class="formations-page__stripe"
+    body-class="formations-page__stripe-body"
+  >
+    <p class="home-intro-band__p">
+      Chaque carte associe un lieu (photo du secteur ou du cadre), les infos qui restent sur votre CV,
+      et deux sorties&nbsp;: la <strong>fiche formation</strong> pour le contenu pédagogique, le
+      <strong>site de l’école</strong> pour le campus et les admissions.
+    </p>
+  </IntroBandSection>
 
   <main class="main" id="main">
     <div class="main__inner main__inner__personalized main__inner--formations">
       <section class="section section--tint section--formations-list" aria-labelledby="form-list-title">
-        <div class="section__head section__head--explore">
-          <span class="section__eyebrow">Parcours</span>
-          <h2 class="section__title" id="form-list-title">Diplômes &amp; lieux</h2>
-          <p class="section__lede">
-            Cliquez les libellés pour ouvrir les sources officielles — pas besoin de tout recopier ici.
-          </p>
-        </div>
+        <SectionHeadBlock
+          title-id="form-list-title"
+          eyebrow="Parcours"
+          title="Diplômes &amp; lieux"
+          lede="Cliquez les libellés pour ouvrir les sources officielles — pas besoin de tout recopier ici."
+        />
 
         <ul class="formations-grid" aria-label="Liste des formations">
           <li v-for="f in formations" :key="f.id" class="formations-grid__cell">
@@ -108,13 +95,12 @@
       </section>
 
       <section class="section section--formations-certs" aria-labelledby="form-certs-title">
-        <div class="section__head section__head--explore">
-          <span class="section__eyebrow">Compléments</span>
-          <h2 class="section__title" id="form-certs-title">Autres certifications</h2>
-          <p class="section__lede">
-            Certifications en cybersécurité, aéronautique et secourisme.
-          </p>
-        </div>
+        <SectionHeadBlock
+          title-id="form-certs-title"
+          eyebrow="Compléments"
+          title="Autres certifications"
+          lede="Certifications en cybersécurité, aéronautique et secourisme."
+        />
 
         <ul class="formations-certs" aria-label="Liste des autres certifications">
           <li
@@ -130,15 +116,25 @@
         </ul>
       </section>
 
-      <nav class="subnav subnav--formations" aria-label="Pages liées">
-        <router-link to="/experiences">← Expériences pro</router-link>
-        <router-link to="/competences">Compétences →</router-link>
-      </nav>
+      <section class="section section--homecta" aria-label="Navigation">
+        <PageSubnav
+          aria-label="Pages liées"
+          prev-to="/experiences"
+          prev-label="← Expériences"
+          next-to="/competences"
+          next-label="Compétences →"
+        />
+      </section>
     </div>
   </main>
 </template>
 
 <script setup>
+import IntroBandSection from "@/components/IntroBandSection.vue";
+import PageSubnav from "@/components/PageSubnav.vue";
+import SectionHeadBlock from "@/components/SectionHeadBlock.vue";
+import StandardPageHero from "@/components/StandardPageHero.vue";
+
 const formations = [
   {
     id: "msc",

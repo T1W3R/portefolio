@@ -4,7 +4,6 @@
       Timothé Werquin &middot; Lille, France &middot; Portefolio
       {{ year }}
     </p>
-    <p class="site-footer__stack">Propulsé par Vue &amp; Vite</p>
     <p class="site-footer__sitemap">
       <router-link to="/a-propos">À propos</router-link> ·
       <router-link to="/experiences">Expériences</router-link> ·

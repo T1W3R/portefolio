@@ -1,43 +1,30 @@
 <template>
-  <section
-    class="site-hero site-hero--compact site-hero--exp-accent"
-    aria-labelledby="exp-hero-title"
-    role="banner"
+  <StandardPageHero
+    title-id="exp-hero-title"
+    kicker="Parcours professionnel"
+    :title-lines="['Expériences', 'professionnelles']"
+    :title-line-styles="[null, { whiteSpace: 'wrap' }]"
+    tagline="Alternance, stage industriel — Elonet &amp; Renault. Missions agiles, modules métiers, et production temps réel."
+    accent-class="site-hero--exp-accent"
   >
-    <div class="site-hero__inner site-hero__inner--solo">
-      <div class="site-hero__left">
-        <p class="site-hero__kicker">Parcours professionnel</p>
-        <p class="site-hero__name">Portfolio</p>
-        <h1 id="exp-hero-title" class="site-hero__display">
-          <span class="site-hero__display-line">Expériences</span>
-          <span class="site-hero__display-line" style="white-space: wrap;">professionnelles</span>
-        </h1>
-        <p class="site-hero__tagline">
-          Alternance, stage industriel — Elonet &amp; Renault. Missions agiles, modules
-          métiers, et production temps réel.
-        </p>
-        <div class="site-hero__actions">
-          <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-          <router-link class="btn btn--ghost" to="/formations">Mes formations</router-link>
-        </div>
-      </div>
-    </div>
-  </section>
+    <template #actions>
+      <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
+      <router-link class="btn btn--ghost" to="/formations">Mes formations</router-link>
+    </template>
+  </StandardPageHero>
 
-  <section class="home-intro-band exp-page__stripe" aria-labelledby="exp-stripe-heading">
-    <div class="home-intro-band__inner">
-      <h2 id="exp-stripe-heading" class="home-intro-band__head">Deux contextes</h2>
-      <div class="exp-page__stripe-body">
-        <div class="home-intro-band__inset">
-          <p class="home-intro-band__p">
-            Chez <strong>Elonet</strong> : cycles courts, clients B2B, produit autour de
-            Dolibarr et d’interfaces sur mesure.<br> Chez <strong>Renault</strong> :
-            contraintes d’usine, données de prod, Symfony et exigence de fiabilité.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <IntroBandSection
+    title-id="exp-stripe-heading"
+    title="Deux contextes"
+    stripe-class="exp-page__stripe"
+    body-class="exp-page__stripe-body"
+  >
+    <p class="home-intro-band__p">
+      Chez <strong>Elonet</strong> : cycles courts, clients B2B, produit autour de
+      Dolibarr et d’interfaces sur mesure.<br> Chez <strong>Renault</strong> :
+      contraintes d’usine, données de prod, Symfony et exigence de fiabilité.
+    </p>
+  </IntroBandSection>
 
   <main class="main" id="main">
     <div class="main__inner main__inner__personalized main__inner--exp">
@@ -45,14 +32,12 @@
         class="section section--tint section--exp-switch-wrap"
         aria-labelledby="exp-tabs-title"
       >
-        <div class="section__head section__head--explore">
-          <span class="section__eyebrow">Détails</span>
-          <h2 class="section__title" id="exp-tabs-title">Choisir une mission</h2>
-          <p class="section__lede">
-            Basculer entre l’alternance longue (Elonet) et le stage en milieu industriel
-            (Renault).
-          </p>
-        </div>
+        <SectionHeadBlock
+          title-id="exp-tabs-title"
+          eyebrow="Détails"
+          title="Choisir une mission"
+          lede="Basculer entre l’alternance longue (Elonet) et le stage en milieu industriel (Renault)."
+        />
 
         <div class="exp-switch" data-exp-switch>
           <div class="exp-switch__tabs" role="tablist" aria-label="Choisir une expérience">
@@ -314,17 +299,13 @@
       </section>
 
       <section class="section section--homecta" aria-label="Navigation">
-        <div class="home-cta home-cta--about-footer">
-          <p class="home-cta__p">
-            La suite du parcours : formations, compétences, ou un message direct sur la page
-            Contact.
-          </p>
-          <div class="home-cta__links">
-            <router-link class="btn btn--outline" to="/a-propos">À propos</router-link>
-            <router-link class="btn btn--outline" to="/formations">Formations</router-link>
-            <router-link class="btn btn--primary" to="/contact">Contact</router-link>
-          </div>
-        </div>
+        <PageSubnav
+          aria-label="Pages liées"
+          prev-to="/a-propos"
+          prev-label="← À propos"
+          next-to="/formations"
+          next-label="Formations →"
+        />
       </section>
     </div>
   </main>
@@ -333,6 +314,10 @@
 <script setup>
 import { ref, watch, onMounted, nextTick } from "vue";
 import { useRoute } from "vue-router";
+import IntroBandSection from "@/components/IntroBandSection.vue";
+import PageSubnav from "@/components/PageSubnav.vue";
+import SectionHeadBlock from "@/components/SectionHeadBlock.vue";
+import StandardPageHero from "@/components/StandardPageHero.vue";
 
 const tabs = [
   {
