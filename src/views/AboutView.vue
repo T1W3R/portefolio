@@ -1,6 +1,6 @@
 <template>
   <section
-    class="site-hero site-hero--compact"
+    class="site-hero site-hero--compact site-hero--about-accent"
     aria-labelledby="about-hero-title"
     role="banner"
   >
@@ -19,19 +19,6 @@
           <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
           <router-link class="btn btn--ghost" to="/experiences">Voir mes expériences</router-link>
         </div>
-      </div>
-      <div class="site-hero__right">
-        <figure class="site-hero__figure">
-          <img
-            class="site-hero__photo no-grayscale"
-            src="/images/me.jpg"
-            alt="Timothé Werquin"
-            width="640"
-            height="800"
-            loading="eager"
-            decoding="async"
-          />
-        </figure>
       </div>
     </div>
   </section>
@@ -123,7 +110,93 @@
           </li>
         </ol>
       </section>
+    </div>
+  </main>
 
+  <section class="home-intro-band about-page__stripe" aria-labelledby="about-stripe-title">
+        <div class="home-intro-band__inner">
+          <span class="section__eyebrow">Perso</span>
+          <h2 id="about-stripe-title" class="home-intro-band__head">Centres d’intérêt</h2>
+          <div class="about-page__stripe-body">
+            <div class="home-intro-band__inset">
+              <p class="home-intro-band__p">
+                Une section visuelle dédiée : je peux y intégrer des photos personnelles pour
+                raconter mes passions en complément du parcours pro.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="passions-carousel" aria-label="Carrousel centres d’intérêt">
+          <div class="passions-carousel__viewport">
+            <ul class="passions-carousel__track" :style="carouselTrackStyle">
+              <li
+                v-for="(interest, idx) in interests"
+                :key="interest.title"
+                class="passions-carousel__slide"
+                :aria-hidden="currentSlide !== idx"
+              >
+                <article class="interests-card">
+                  <figure class="interests-card__media">
+                    <img
+                      v-if="interest.img"
+                      class="interests-card__img no-grayscale"
+                      :src="interest.img"
+                      :alt="interest.alt"
+                      width="960"
+                      height="640"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div v-else class="interests-card__placeholder">
+                      <span>Photo à ajouter</span>
+                    </div>
+                  </figure>
+                  <div class="interests-card__body">
+                    <h3 class="interests-card__title">{{ interest.title }}</h3>
+                    <p class="interests-card__text">{{ interest.text }}</p>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+          <div class="passions-carousel__controls">
+            <button
+              type="button"
+              class="passions-carousel__btn"
+              aria-label="Slide précédent"
+              @click="prevSlide"
+            >
+              ←
+            </button>
+            <div class="passions-carousel__dots" role="tablist" aria-label="Aller à une slide">
+              <button
+                v-for="(interest, idx) in interests"
+                :key="`dot-${interest.title}`"
+                type="button"
+                class="passions-carousel__dot"
+                :class="{ 'passions-carousel__dot--active': idx === currentSlide }"
+                role="tab"
+                :aria-selected="idx === currentSlide"
+                :aria-label="`Voir ${interest.title}`"
+                @click="goToSlide(idx)"
+              />
+            </div>
+            <button
+              type="button"
+              class="passions-carousel__btn"
+              aria-label="Slide suivant"
+              @click="nextSlide"
+            >
+              →
+            </button>
+          </div>
+        </div>
+  </section>
+
+  <main class="main" id="main">
+    <div class="main__inner main__inner__personalized main__inner--about">
       <section class="section section--homecta" aria-label="Pages liées">
         <div class="home-cta home-cta--about-footer">
           <p class="home-cta__p">
@@ -139,3 +212,59 @@
     </div>
   </main>
 </template>
+
+<script setup>
+import { computed, ref } from "vue";
+
+const interests = [
+  {
+    title: "Sport",
+    text: "Musculation, course à pied, randonnée, régularité et progression.",
+    img: "/images/interests/rando.jpeg",
+    alt: "Photo sport",
+  },
+  {
+    title: "Tech & créa",
+    text: "Développement web/mobile, veille produit et design d’interface.",
+    img: "/images/me.jpg",
+    alt: "Photo développement",
+  },
+  {
+    title: "Culture & loisirs",
+    text: "Formule 1, cinéma et jeux vidéo.",
+    img: "/images/interests/f1.jpeg",
+    alt: "Photo loisirs",
+  },
+  {
+    title: "Engagement",
+    text: "Benevole Secouriste Croix-Blanche",
+    img: "/images/interests/secourisme.jpeg",
+    alt: "Photo engagement et musique",
+  },
+  {
+    title: "Musique",
+    text: "Autodidacte chant, guitare, basse, ukulélé, piano.",
+    img: "/images/interests/guitare.jpg",
+    alt: "Photo engagement et musique",
+  },
+];
+
+const currentSlide = ref(0);
+const totalSlides = computed(() => interests.length || 1);
+const carouselTrackStyle = computed(() => ({
+  transform: `translateX(-${currentSlide.value * 100}%)`,
+}));
+
+function prevSlide() {
+  currentSlide.value =
+    (currentSlide.value - 1 + totalSlides.value) % totalSlides.value;
+}
+
+function nextSlide() {
+  currentSlide.value = (currentSlide.value + 1) % totalSlides.value;
+}
+
+function goToSlide(idx) {
+  currentSlide.value = idx;
+}
+</script>

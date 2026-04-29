@@ -1,5 +1,5 @@
 <template>
-  <header class="page-hero">
+  <header :class="['page-hero', `page-hero--${variant}`]">
     <div class="page-hero__inner">
       <span class="page-hero__eyebrow">{{ eyebrow }}</span>
       <h1 class="page-hero__title">{{ title }}</h1>
@@ -13,5 +13,6 @@ defineProps({
   eyebrow: { type: String, required: true },
   title: { type: String, required: true },
   lede: { type: String, required: true },
+  variant: { type: String, default: "default" },
 });
 </script>

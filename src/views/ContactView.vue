@@ -3,6 +3,7 @@
     eyebrow="Échange"
     title="Me contacter"
     lede="Disponible pour en discuter : opportunité, question, collaboration."
+    variant="contact"
   />
   <main class="main" id="main">
     <div class="main__inner main__inner--sub">

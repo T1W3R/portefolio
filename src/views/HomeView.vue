@@ -1,5 +1,5 @@
 <template>
-  <section class="site-hero" role="banner" aria-label="Présentation">
+  <section class="site-hero site-hero--home-accent" role="banner" aria-label="Présentation">
     <div class="site-hero__inner">
       <div class="site-hero__left">
         <p class="site-hero__kicker">Ingénieur développement logiciel</p>
@@ -10,11 +10,11 @@
         </h1>
         <p class="site-hero__tagline"><span id="job">Développeur Full Stack</span> · <span id="job">Data</span> · <span id="job">IA</span></p>
         <div class="site-hero__actions">
-          <a class="btn btn--primary" href="mailto:werquin.timothe@gmail.com"
-            >Me contacter</a
+          <router-link class="btn btn--primary" to="/contact"
+            >Me contacter</router-link
           >
-          <router-link class="btn btn--ghost" to="/experiences"
-            >Voir mes expériences</router-link
+          <router-link class="btn btn--ghost" to="/a-propos"
+            >A propos de moi</router-link
           >
         </div>
         <ul class="site-hero__meta" aria-label="Coordonnées">
@@ -111,6 +111,12 @@
             compétences, et un fil direct pour m’écrire. J’aime les outils utiles, le
             travail bien cadré, et le lien avec les besoins réels des équipes.
           </p>
+          <br><br><br>
+          <div class="home-intro-band__actions">
+            <a class="btn btn--outline" href="/CV_Werquin_Timothé.pdf" download>
+              Télécharger mon CV (PDF)
+            </a>
+          </div>
         </div>
         <figure class="home-intro-band__figure">
             <img src="/images/me.jpg" alt="Timothé Werquin" height="300" width="300">

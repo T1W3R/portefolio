@@ -1,6 +1,6 @@
 <template>
   <section
-    class="site-hero site-hero--compact"
+    class="site-hero site-hero--compact site-hero--formations-accent"
     aria-labelledby="form-hero-title"
     role="banner"
   >
@@ -16,7 +16,7 @@
         </p>
         <div class="site-hero__actions">
           <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-          <router-link class="btn btn--ghost" to="/experiences">Expériences pro</router-link>
+          <router-link class="btn btn--ghost" to="/competences">Mes compétences</router-link>
         </div>
       </div>
     </div>

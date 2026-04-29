@@ -1,12 +1,55 @@
 <template>
-  <PageHero
-    eyebrow="Savoir-faire"
-    title="Compétences & intérêts"
-    lede="Technique, relationnel, langues, et ce qui vous anime en dehors du code."
-  />
+  <section
+    class="site-hero site-hero--compact site-hero--skills-accent"
+    aria-labelledby="skills-hero-title"
+    role="banner"
+  >
+    <div class="site-hero__inner site-hero__inner--solo">
+      <div class="site-hero__left">
+        <p class="site-hero__kicker">Savoir-faire</p>
+        <p class="site-hero__name">Portfolio</p>
+        <h1 id="skills-hero-title" class="site-hero__display">
+          <span class="site-hero__display-line">Compétences</span>
+        </h1>
+        <p class="site-hero__tagline">
+          Technique, relationnel et langues : une vision rapide des outils que j’utilise
+          et de ma manière de travailler.
+        </p>
+        <div class="site-hero__actions">
+          <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
+          <router-link class="btn btn--ghost" to="/a-propos">A propos de moi</router-link>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-intro-band skills-page__stripe" aria-labelledby="skills-stripe-title">
+    <div class="home-intro-band__inner">
+      <h2 id="skills-stripe-title" class="home-intro-band__head">Ce que j’apporte</h2>
+      <div class="skills-page__stripe-body">
+        <div class="home-intro-band__inset">
+          <p class="home-intro-band__p">
+            Stack orientée produit, collaboration d’équipe et socle en data/IA : la section
+            ci-dessous va du concret (outils) au contexte (langues, soft skills).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main class="main" id="main">
-    <div class="main__inner main__inner--sub">
-      <div class="bento">
+    <div class="main__inner main__inner__personalized main__inner--skills">
+      <section class="section section--tint section--skills-board" aria-labelledby="skills-board-title">
+        <div class="section__head section__head--explore">
+          <span class="section__eyebrow">Détails</span>
+          <h2 class="section__title" id="skills-board-title">Stack &amp; profil</h2>
+          <p class="section__lede">
+            Une lecture rapide des outils techniques, des qualités de collaboration et des
+            langues utilisées dans mes projets.
+          </p>
+        </div>
+
+        <div class="bento">
         <div class="bento__item bento__item--wide">
           <h2 class="bento__label">Stack &amp; outils</h2>
           <ul class="stack-widgets" role="list">
@@ -28,6 +71,7 @@
           <h2 class="bento__label">Soft skills</h2>
           <ul class="bento__ul">
             <li>Esprit d’équipe</li>
+            <li>Perfectionniste</li>
             <li>Méthodique, autonome, minutieux</li>
             <li>Esprit d’initiative, volontaire, persévérant, curieux</li>
           </ul>
@@ -55,15 +99,8 @@
             </li>
           </ul>
         </div>
-        <div class="bento__item bento__item--wide">
-          <h2 class="bento__label">Centres d’intérêt</h2>
-          <p class="bento__p">
-            Sport (musculation, course à pied), développement web &amp; mobile, Formule
-            1, cinéma, jeux vidéo. Bénévolat (secouriste Croix-Blanche). Musique :
-            guitare, basse, ukulélé, piano.
-          </p>
-        </div>
       </div>
+      </section>
 
       <nav class="subnav" aria-label="Pages liées">
         <router-link to="/formations">← Formations</router-link>
@@ -74,8 +111,6 @@
 </template>
 
 <script setup>
-import PageHero from "@/components/PageHero.vue";
-
 const stack = [
   { name: "Java", img: "/images/java.png" },
   { name: "Spring Boot", img: "/images/Spring_Boot.png" },
