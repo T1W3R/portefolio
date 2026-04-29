@@ -39,7 +39,7 @@
 
       <p class="page-lede">
         Vous préférez un <strong>formulaire intégré</strong> (envoi côté serveur) plutôt
-        que le client mail ? Il peut être ajouté côté serveur (mail, validation, antispam)
+        que le mail client ? Il peut être ajouté côté serveur (mail, validation, antispam)
         lorsque vous le souhaitez.
       </p>
 
