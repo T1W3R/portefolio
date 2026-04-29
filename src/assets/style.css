@@ -71,15 +71,6 @@ select {
   font-family: inherit;
 }
 
-/* Photos façon référence : noir & blanc (logos / drapeaux : .no-grayscale) */
-img:not(.no-grayscale) {
-  filter: grayscale(100%);
-}
-
-img.no-grayscale {
-  filter: none;
-}
-
 body.nav-open {
   overflow: hidden;
 }
@@ -608,11 +599,9 @@ body.nav-open .nav__panel {
 
 .site-hero__photo {
   display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
+  height: 30em;
+  transform: translateX(-28em);
   object-fit: cover;
-  background: #2a2a2a;
 }
 
 .site-hero__photo--placeholder {

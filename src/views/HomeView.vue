@@ -73,8 +73,6 @@
             class="site-hero__photo"
             :src="heroPortraitSrc"
             alt="Timothé Werquin"
-            width="640"
-            height="800"
             loading="eager"
             decoding="async"
           />
@@ -207,10 +205,10 @@
 import { onMounted, ref } from "vue";
 
 /** Remplis automatiquement si vous ajoutez public/images/hero-portrait.jpg */
-const heroPortraitSrc = ref("images/me.jpg ");
+const heroPortraitSrc = ref("images/front_image.png ");
 
 onMounted(() => {
-  const path = `${import.meta.env.BASE_URL}images/hero-portrait.jpg`;
+  const path = `${import.meta.env.BASE_URL}images/front_image.png`;
   fetch(path, { method: "HEAD" })
     .then((res) => {
       if (res.ok) heroPortraitSrc.value = path;
