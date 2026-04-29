@@ -170,15 +170,27 @@ em {
 }
 
 .nav__brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 1.1rem;
   color: var(--forest);
-  padding: 0.4rem 0.6rem;
+  padding: 0.2rem 0.35rem;
   border-radius: var(--radius-sm);
   z-index: 2;
   transition: background 0.2s, color 0.2s;
   pointer-events: auto;
+}
+
+.nav__brand-logo {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 20%;
+  object-fit: contain;
+  box-shadow: 0 0 10px 0 var(--shadow-lg);
 }
 
 .nav__brand:hover {
@@ -602,6 +614,9 @@ body.nav-open .nav__panel {
   height: 32em;
   transform: translate(-25em,5em);
   object-fit: cover;
+  opacity: 0;
+  animation: hero-photo-enter 900ms cubic-bezier(0.18, 0.78, 0.24, 1) 120ms forwards;
+  will-change: transform, opacity;
 }
 
 @media (max-width: 780px) {
@@ -668,6 +683,12 @@ body.nav-open .nav__panel {
   .site-hero__scroll-line {
     animation: none;
   }
+
+  .site-hero__photo {
+    animation: none;
+    opacity: 1;
+    transform: translate(-25em,5em);
+  }
 }
 
 @keyframes scroll-nudge {
@@ -679,6 +700,17 @@ body.nav-open .nav__panel {
   50% {
     transform: translateY(0.4rem);
     opacity: 0.5;
+  }
+}
+
+@keyframes hero-photo-enter {
+  from {
+    transform: translate(6em, 5em);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-25em, 5em);
+    opacity: 1;
   }
 }
 

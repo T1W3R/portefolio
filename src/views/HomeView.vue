@@ -82,7 +82,7 @@
             role="img"
             aria-label="Espace portrait (photo à ajouter)"
           >
-            <span class="site-hero__photo-initials" aria-hidden="true">TW</span>
+            <img src="/images/logo.png" alt="Timothé Werquin" height="25" width="25">
           </div>
         </figure>
       </div>

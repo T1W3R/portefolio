@@ -2,7 +2,15 @@
   <header class="site-top">
     <nav class="nav" id="nav" aria-label="Navigation principale">
       <div class="nav__bar">
-        <router-link class="nav__brand" to="/">TW</router-link>
+        <router-link class="nav__brand" to="/" aria-label="Retour à l'accueil">
+          <img
+            class="nav__brand-logo"
+            src="/images/logo.png"
+            alt="Logo TW"
+            width="34"
+            height="34"
+          />
+        </router-link>
         <button
           type="button"
           class="nav__toggle"
