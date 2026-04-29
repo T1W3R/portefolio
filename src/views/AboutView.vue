@@ -42,7 +42,7 @@
             Ingénieur développement logiciel, passionné de
             <em>sport &amp; performance</em>. Full stack (Python, PHP, React), j’ai grandi en
             méthodologie agile chez
-            <strong>Elonet</strong> : même exigence que le crossfit — rigueur, autonomie, esprit
+            <strong>Elonet</strong> : rigueur, autonomie, esprit
             d’équipe. J’aime bâtir des <strong>outils utiles</strong>, de la prise de besoin au
             déploiement, et contribuer à rendre le sport
             <strong>accessible à tous</strong> lorsque le contexte s’y prête.
