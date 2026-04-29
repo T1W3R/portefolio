@@ -26,6 +26,13 @@
             target="_blank"
             >LinkedIn</a
           >
+          <a
+            class="btn btn--outline"
+            href="https://github.com/T1W3R?tab=repositories"
+            rel="noopener noreferrer"
+            target="_blank"
+            >GitHub</a
+          >
         </div>
       </div>
 

@@ -10,7 +10,13 @@
       <router-link to="/experiences">Expériences</router-link> ·
       <router-link to="/formations">Formations</router-link> ·
       <router-link to="/competences">Compétences</router-link> ·
-      <router-link to="/contact">Contact</router-link>
+      <router-link to="/contact">Contact</router-link> ·
+      <a
+        href="https://github.com/T1W3R?tab=repositories"
+        rel="noopener noreferrer"
+        target="_blank"
+        >GitHub</a
+      >
     </p>
   </footer>
 </template>

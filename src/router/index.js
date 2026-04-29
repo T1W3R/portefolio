@@ -64,7 +64,7 @@ const routes = [
         meta: {
           title: "Contact",
           description:
-            "Contacter Timothé Werquin — e-mail, téléphone, LinkedIn, Lille.",
+            "Contacter Timothé Werquin — e-mail, téléphone, LinkedIn, GitHub, Lille.",
         },
       },
     ],
