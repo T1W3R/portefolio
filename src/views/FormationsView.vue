@@ -92,7 +92,7 @@
                     <span class="formation-card__ext" aria-hidden="true">↗</span>
                   </a>
                   <a
-                    class="btn btn--outline"
+                    class="btn btn--ghost"
                     :href="f.schoolUrl"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -102,6 +102,29 @@
                   </a>
                 </div>
               </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section section--formations-certs" aria-labelledby="form-certs-title">
+        <div class="section__head section__head--explore">
+          <span class="section__eyebrow">Compléments</span>
+          <h2 class="section__title" id="form-certs-title">Autres certifications</h2>
+          <p class="section__lede">
+            Certifications en cybersécurité, aéronautique et secourisme.
+          </p>
+        </div>
+
+        <ul class="formations-certs" aria-label="Liste des autres certifications">
+          <li
+            v-for="certification in certifications"
+            :key="certification.acronym"
+            class="formations-certs__item"
+          >
+            <article class="formations-certs__card">
+              <p class="formations-certs__acronym">{{ certification.acronym }}</p>
+              <p class="formations-certs__label">{{ certification.label }}</p>
             </article>
           </li>
         </ul>
@@ -149,7 +172,7 @@ const formations = [
     school: "Lycée Guy de Dampierre",
     campus: "Valenciennes",
     photo: "/images/formations/dampierre.jpg",
-    logo: "https://www.anephot.org/wp-content/uploads/2023/11/4f7e20a6f5bf23975d6c096d0f8d6e86.jpeg",
+    logo: "/images/formations/dampierre_logo.png",
     note: "",
     programmeUrl: "https://lyceedampierre-valarep.fr/bts/",
     schoolUrl: "https://lyceedampierre-valarep.fr/",
@@ -161,11 +184,34 @@ const formations = [
     school: "Lycée Notre-Dame de Grâce",
     campus: "Maubeuge",
     photo: "/images/formations/maubeuge.jpg",
-    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdwkb6ATONePhdzCqv1Ps72AcUJmBOv2iezg&s",
+    logo: "/images/formations/maubeuge_logo.png",
     note: "",
     programmeUrl:
       "https://www.service-public.gouv.fr/particuliers/vosdroits/F10029",
     schoolUrl: "https://notredamedelasambre.org/lycee-notre-dame-de-grace/",
+  },
+];
+
+const certifications = [
+  {
+    acronym: "SECNUM",
+    label: "Attestation en Cybersécurité",
+  },
+  {
+    acronym: "BIA",
+    label: "Brevet d’Initiation Aéronautique",
+  },
+  {
+    acronym: "PSE2",
+    label: "Brevet d’Équipier Secouriste 2nd niveau",
+  },
+  {
+    acronym: "PSE1",
+    label: "Brevet d’Équipier Secouriste 1er niveau",
+  },
+  {
+    acronym: "PSC1",
+    label: "Prévention et Secours Civiques de niveau 1",
   },
 ];
 </script>

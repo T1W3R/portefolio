@@ -507,6 +507,7 @@ body.nav-open .nav__panel {
   .site-hero__display,
   .site-hero__display-line {
     overflow-wrap: anywhere;
+    font-size: 50px;
   }
 }
 
@@ -2187,8 +2188,7 @@ body.nav-open .nav__panel {
   border: 1px solid color-mix(in srgb, var(--cream) 20%, transparent);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow:
-    0 24px 46px rgba(0, 0, 0, 0.35),
+  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
@@ -3108,13 +3108,15 @@ body.nav-open .nav__panel {
 
 .formation-card__logo {
   position: absolute;
-  left: 0.85rem;
-  bottom: 0.75rem;
+  bottom: 0;
   max-width: min(9rem, 48%);
-  max-height: 2.75rem;
-  width: auto;
-  height: auto;
+  max-height: 3rem;
+  width: 9rem;
+  height: 9rem;
   object-fit: contain;
+  background: var(--cream);
+  padding: 0.3rem;
+  border-radius: 0 0.3em 0 0;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.35));
 }
 
@@ -3205,6 +3207,67 @@ body.nav-open .nav__panel {
 
 .subnav--formations {
   margin-top: 2rem;
+}
+
+.section--formations-certs {
+  margin-top: 2rem;
+}
+
+.section--formations-certs .section__title {
+  font-size: clamp(1.8rem, 5.4vw, 3rem);
+}
+
+.section--formations-certs .section__lede {
+  max-width: 40rem;
+}
+
+.formations-certs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .formations-certs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.formations-certs__item {
+  margin: 0;
+}
+
+.formations-certs__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  height: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--terracotta);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--paper) 90%, #fff);
+}
+
+.formations-certs__acronym {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--terracotta-soft);
+}
+
+.formations-certs__label {
+  margin: 0;
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--olive-dark);
 }
 
 /* Accueil — grille bento */
