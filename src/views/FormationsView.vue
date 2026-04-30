@@ -15,8 +15,8 @@
   <IntroBandSection
     title-id="form-stripe-title"
     title="Un fil continu"
-    stripe-class="formations-page__stripe"
-    body-class="formations-page__stripe-body"
+    stripe-class="page__stripe"
+    body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
       Chaque carte associe un lieu (photo du secteur ou du cadre), les infos qui restent sur votre CV,

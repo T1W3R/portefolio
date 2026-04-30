@@ -17,7 +17,7 @@
     title-id="about-stripe-title"
     title="Du terrain aux backlog"
     stripe-class="about-page__stripe"
-    body-class="about-page__stripe-body"
+    body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
       La même exigence que sur un WOD ou une revue de sprint : progression mesurable,
@@ -106,7 +106,7 @@
     title="Centres d’intérêt"
     eyebrow="Perso"
     stripe-class="about-page__stripe"
-    body-class="about-page__stripe-body"
+    body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
       Une section visuelle dédiée : je peux y intégrer des photos personnelles pour

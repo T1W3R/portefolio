@@ -15,8 +15,8 @@
   <IntroBandSection
     title-id="contact-stripe-title"
     title="Parlons concret"
-    stripe-class="contact-page__stripe"
-    body-class="contact-page__stripe-body"
+    stripe-class="page__stripe"
+    body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
       Vous pouvez me joindre par mail, téléphone, LinkedIn ou GitHub. Je réponds

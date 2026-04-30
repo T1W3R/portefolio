@@ -15,8 +15,8 @@
   <IntroBandSection
     title-id="skills-stripe-title"
     title="Ce que j’apporte"
-    stripe-class="skills-page__stripe"
-    body-class="skills-page__stripe-body"
+    stripe-class="page__stripe"
+    body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
       Stack orientée produit, collaboration d’équipe et socle en data/IA : la section

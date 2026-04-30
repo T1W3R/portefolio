@@ -16,8 +16,8 @@
   <IntroBandSection
     title-id="exp-stripe-heading"
     title="Deux contextes"
-    stripe-class="exp-page__stripe"
-    body-class="exp-page__stripe-body"
+    stripe-class="page__stripe"
+    body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
       Chez <strong>Elonet</strong> : cycles courts, clients B2B, produit autour de
@@ -99,6 +99,10 @@
 
                 <div class="exp-elonet__body">
                   <div class="exp-elonet__intro">
+                    <p class="exp-elonet__lead">
+                      <strong class="exp-elonet__strong">Évolution au sein de l'entreprise.</strong>
+                      Étant d'abord entré pour un stage de fin de BTS SIO, j'ai ensuite été embauché en tant que développeur full stack pour un CDD pendant les vacances qui ont suivi. Désireux de poursuivre l'aventure, j'ai été embauché en alternance afin de continuer mes études jusqu'à la fin de l'entreprise.
+                    </p>
                     <p class="exp-elonet__lead">
                       <strong class="exp-elonet__strong">Projets internes.</strong>
                       Outils métiers en équipe agile ; interfaces Vue.js &amp; React ; backends
@@ -227,13 +231,15 @@
                     decoding="async"
                   />
                   <div class="exp-renault__hero-text">
-                    <p class="exp-renault__eyebrow">Stage · Usine · Temps réel</p>
+                    <p class="exp-renault__eyebrow">
+                      Stage · Service informatique / montage · Temps réel
+                    </p>
                     <h3 id="renault-title" class="exp-renault__title">
                       Développeur full stack — stagiaire
                     </h3>
                     <p class="exp-renault__dates">
-                      mai — juil. 2022 ·
-                      <span class="exp-renault__company">Renault — Ampère Maubeuge</span>
+                      23 mai — 1 juil. 2022 · 6 semaines ·
+                      <span class="exp-renault__company">Renault ElectriCity — Maubeuge</span>
                     </p>
                   </div>
                 </header>
@@ -262,9 +268,9 @@
                 <div class="exp-renault__body">
                   <div class="exp-renault__intro">
                     <p class="exp-renault__lead">
-                      <strong class="exp-renault__strong">Monitoring de production.</strong>
-                      Interface de visualisation en temps réel des indicateurs de rendement (OEE /
-                      TRS) sur les lignes.
+                      <strong class="exp-renault__strong">Mission principale.</strong>
+                      Développement d'un affichage du rendement des unités, avec une visualisation
+                      en temps réel des indicateurs de production (OEE / TRS) sur les lignes.
                     </p>
                     <p class="exp-renault__lead">
                       <strong class="exp-renault__strong">Back &amp; intégration.</strong>
