@@ -4,7 +4,7 @@
     kicker="Parcours professionnel"
     :title-lines="['Expériences', 'professionnelles']"
     :title-line-styles="[null, { whiteSpace: 'wrap' }]"
-    tagline="Alternance, stage industriel — Elonet &amp; Renault. Missions agiles, modules métiers, et production temps réel."
+    tagline="Alternance, stage industriel — Elonet &amp; Renault. Missions agiles, modules métiers, et production en temps réel."
     accent-class="site-hero--exp-accent"
   >
     <template #actions>

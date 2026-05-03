@@ -231,7 +231,7 @@ const interests = [
   },
   {
     title: "Musique",
-    text: "Autodidacte chant, guitare, basse, ukulélé, piano.",
+    text: "Autodidacte en chant, guitare, basse, ukulélé, piano.",
     img: "/images/interests/guitare.jpg",
     alt: "Photo engagement et musique",
   },
