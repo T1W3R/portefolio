@@ -1,20 +1,20 @@
 <template>
   <footer class="site-footer">
     <p class="site-footer__p">
-      Timothé Werquin &middot; Lille, France &middot; Portfolio
+      {{ $t("common.name") }} &middot; {{ $t("footer.city") }} &middot; {{ $t("common.portfolio") }}
       {{ year }}
     </p>
     <p class="site-footer__sitemap">
-      <router-link to="/a-propos">À propos</router-link> ·
-      <router-link to="/experiences">Expériences</router-link> ·
-      <router-link to="/formations">Formations</router-link> ·
-      <router-link to="/competences">Compétences</router-link> ·
-      <router-link to="/contact">Contact</router-link> ·
+      <router-link to="/a-propos">{{ $t("nav.about") }}</router-link> ·
+      <router-link to="/experiences">{{ $t("nav.experiences") }}</router-link> ·
+      <router-link to="/formations">{{ $t("nav.formations") }}</router-link> ·
+      <router-link to="/competences">{{ $t("nav.competences") }}</router-link> ·
+      <router-link to="/contact">{{ $t("nav.contact") }}</router-link> ·
       <a
         href="https://github.com/T1W3R?tab=repositories"
         rel="noopener noreferrer"
         target="_blank"
-        >GitHub</a
+        >{{ $t("common.github") }}</a
       >
     </p>
   </footer>

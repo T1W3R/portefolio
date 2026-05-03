@@ -1,8 +1,8 @@
 <template>
   <header class="site-top">
-    <nav class="nav" id="nav" aria-label="Navigation principale">
+    <nav class="nav" id="nav" :aria-label="t('nav.main')">
       <div class="nav__bar">
-        <router-link class="nav__brand" to="/" aria-label="Retour à l'accueil">
+        <router-link class="nav__brand" to="/" :aria-label="t('nav.backHome')">
           <img
             class="nav__brand-logo"
             src="/images/logo.png"
@@ -11,18 +11,55 @@
             height="34"
           />
         </router-link>
-        <button
-          type="button"
-          class="nav__toggle"
-          id="navToggle"
-          aria-expanded="false"
-          aria-controls="navPanel"
-          aria-label="Ouvrir le menu"
-        >
-          <span class="nav__toggle-line" aria-hidden="true" />
-          <span class="nav__toggle-line" aria-hidden="true" />
-          <span class="nav__toggle-line" aria-hidden="true" />
-        </button>
+        <div class="nav__mobile-controls">
+          <div class="nav__locale-switch" :aria-label="t('common.language')">
+            <button
+              type="button"
+              class="nav__locale-code"
+              :class="{ 'nav__locale-code--active': locale === 'fr' }"
+              @click="changeLocale('fr')"
+            >
+              FR
+            </button>
+            <button
+              type="button"
+              class="nav__locale-toggle"
+              role="switch"
+              :aria-checked="locale === 'en'"
+              :aria-label="t('common.language')"
+              @click="toggleLocale"
+            >
+              <span
+                class="nav__locale-thumb"
+                :class="{
+                  'nav__locale-thumb--fr': locale === 'fr',
+                  'nav__locale-thumb--en': locale === 'en'
+                }"
+                aria-hidden="true"
+              />
+            </button>
+            <button
+              type="button"
+              class="nav__locale-code"
+              :class="{ 'nav__locale-code--active': locale === 'en' }"
+              @click="changeLocale('en')"
+            >
+              EN
+            </button>
+          </div>
+          <button
+            type="button"
+            class="nav__toggle"
+            id="navToggle"
+            aria-expanded="false"
+            aria-controls="navPanel"
+            :aria-label="t('nav.openMenu')"
+          >
+            <span class="nav__toggle-line" aria-hidden="true" />
+            <span class="nav__toggle-line" aria-hidden="true" />
+            <span class="nav__toggle-line" aria-hidden="true" />
+          </button>
+        </div>
         <div class="nav__panel" id="navPanel">
           <div ref="navLinksWrapRef" class="nav__links-wrap">
             <ul class="nav__links">
@@ -32,7 +69,7 @@
                   class="nav__link"
                   :class="{ 'nav__link--active': isActive('home') }"
                   data-nav
-                  >Accueil</router-link
+                  >{{ t("nav.home") }}</router-link
                 >
               </li>
               <li>
@@ -41,7 +78,7 @@
                   class="nav__link"
                   :class="{ 'nav__link--active': isActive('about') }"
                   data-nav
-                  >À propos</router-link
+                  >{{ t("nav.about") }}</router-link
                 >
               </li>
               <li>
@@ -50,7 +87,7 @@
                   class="nav__link"
                   :class="{ 'nav__link--active': isActive('experiences') }"
                   data-nav
-                  >Expériences</router-link
+                  >{{ t("nav.experiences") }}</router-link
                 >
               </li>
               <li>
@@ -59,7 +96,7 @@
                   class="nav__link"
                   :class="{ 'nav__link--active': isActive('formations') }"
                   data-nav
-                  >Formations</router-link
+                  >{{ t("nav.formations") }}</router-link
                 >
               </li>
               <li>
@@ -68,7 +105,7 @@
                   class="nav__link"
                   :class="{ 'nav__link--active': isActive('competences') }"
                   data-nav
-                  >Compétences</router-link
+                  >{{ t("nav.competences") }}</router-link
                 >
               </li>
               <li>
@@ -77,7 +114,7 @@
                   class="nav__link nav__link--cta"
                   :class="{ 'nav__link--active': isActive('contact') }"
                   data-nav
-                  >Contact</router-link
+                  >{{ t("nav.contact") }}</router-link
                 >
               </li>
             </ul>
@@ -98,18 +135,31 @@
 import {
   ref,
   reactive,
+  computed,
   watch,
   onMounted,
   onBeforeUnmount,
   nextTick,
 } from "vue";
 import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
+import { setLocale } from "@/i18n";
 
 const route = useRoute();
 const navLinksWrapRef = ref(null);
+const { t, locale: currentLocale } = useI18n();
+const locale = computed(() => currentLocale.value);
 
 function isActive(name) {
   return route.name === name;
+}
+
+function changeLocale(nextLocale) {
+  setLocale(nextLocale);
+}
+
+function toggleLocale() {
+  changeLocale(locale.value === "fr" ? "en" : "fr");
 }
 
 const indicatorStyle = reactive({

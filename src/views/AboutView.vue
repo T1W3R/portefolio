@@ -1,27 +1,26 @@
 <template>
   <StandardPageHero
     title-id="about-hero-title"
-    kicker="Profil &amp; valeurs"
-    :title-lines="['À', 'propos']"
-    tagline="Agilité, produit, sport &amp; performance — le fil qui guide mon travail."
+    :kicker="$t('about.hero.kicker')"
+    :title-lines="[$t('about.hero.titleLine1'), $t('about.hero.titleLine2')]"
+    :tagline="$t('about.hero.tagline')"
     accent-class="site-hero--about-accent"
     :solo="false"
   >
     <template #actions>
-      <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-      <router-link class="btn btn--ghost" to="/experiences">Voir mes expériences</router-link>
+      <router-link class="btn btn--primary" to="/contact">{{ $t("common.contactMe") }}</router-link>
+      <router-link class="btn btn--ghost" to="/experiences">{{ $t("about.actions.experiences") }}</router-link>
     </template>
   </StandardPageHero>
 
   <IntroBandSection
     title-id="about-stripe-title"
-    title="Du terrain au backlog"
+    :title="$t('about.stripe.title')"
     stripe-class="about-page__stripe"
     body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
-      La même exigence que sur un WOD ou une revue de sprint : progression mesurable,
-      régularité, communication claire. J’aime qu’on sache où on va — et pourquoi.
+      {{ $t("about.stripe.text") }}
     </p>
   </IntroBandSection>
 
@@ -33,32 +32,26 @@
       >
         <SectionHeadBlock
           title-id="t-about"
-          eyebrow="Bio"
-          title="Ma présentation"
-          lede="Développeur orienté impact et collaboration — du besoin utilisateur au déploiement."
+          :eyebrow="$t('about.bio.eyebrow')"
+          :title="$t('about.bio.title')"
+          :lede="$t('about.bio.lede')"
         />
         <div class="about-page__split">
           <p class="about__text">
-            Ingénieur développement logiciel, passionné de
-            <em>sport &amp; performance</em>. Full stack (Python, PHP, React), j’ai grandi en
-            méthodologie agile chez
-            <strong>Elonet</strong> : rigueur, autonomie, esprit
-            d’équipe. J’aime bâtir des <strong>outils utiles</strong>, de la prise de besoin au
-            déploiement, et contribuer à rendre le sport
-            <strong>accessible à tous</strong> lorsque le contexte s’y prête.
+            {{ $t("about.bio.text") }}
           </p>
-          <ul class="about-values" aria-label="Valeurs clés">
+          <ul class="about-values" :aria-label="$t('about.values.aria')">
             <li class="about-values__item">
-              <span class="about-values__label">Pratique</span>
-              <span class="about-values__text">Méthodes agiles — Scrum, itérations courtes</span>
+              <span class="about-values__label">{{ $t("about.values.practiceLabel") }}</span>
+              <span class="about-values__text">{{ $t("about.values.practiceText") }}</span>
             </li>
             <li class="about-values__item">
-              <span class="about-values__label">Qualité</span>
-              <span class="about-values__text">Produit, code, tests</span>
+              <span class="about-values__label">{{ $t("about.values.qualityLabel") }}</span>
+              <span class="about-values__text">{{ $t("about.values.qualityText") }}</span>
             </li>
             <li class="about-values__item">
-              <span class="about-values__label">Horizon</span>
-              <span class="about-values__text">Data, IA, industrialisation</span>
+              <span class="about-values__label">{{ $t("about.values.horizonLabel") }}</span>
+              <span class="about-values__text">{{ $t("about.values.horizonText") }}</span>
             </li>
           </ul>
         </div>
@@ -67,33 +60,30 @@
       <section class="section section--about-how" aria-labelledby="t-how">
         <SectionHeadBlock
           title-id="t-how"
-          eyebrow="Méthode"
-          title="Comment je travaille"
-          lede="Transparence, proactivité, feedback — en trois temps."
+          :eyebrow="$t('about.method.eyebrow')"
+          :title="$t('about.method.title')"
+          :lede="$t('about.method.lede')"
         />
-        <ol class="about-how-cards" aria-label="Principes de travail">
+        <ol class="about-how-cards" :aria-label="$t('about.method.aria')">
           <li class="about-how-cards__item">
             <span class="about-how-cards__step">01</span>
-            <h3 class="about-how-cards__title">Clarifier le besoin</h3>
+            <h3 class="about-how-cards__title">{{ $t("about.method.step1Title") }}</h3>
             <p class="about-how-cards__p">
-              Ateliers, questions, priorisation : avant d’écrire du code, j’aligne la valeur
-              attendue avec les parties prenantes.
+              {{ $t("about.method.step1Text") }}
             </p>
           </li>
           <li class="about-how-cards__item">
             <span class="about-how-cards__step">02</span>
-            <h3 class="about-how-cards__title">Livrer en confiance</h3>
+            <h3 class="about-how-cards__title">{{ $t("about.method.step2Title") }}</h3>
             <p class="about-how-cards__p">
-              Déploiements progressifs, revues, documentation légère : l’équipe et les
-              utilisateurs s’y retrouvent.
+              {{ $t("about.method.step2Text") }}
             </p>
           </li>
           <li class="about-how-cards__item">
             <span class="about-how-cards__step">03</span>
-            <h3 class="about-how-cards__title">Mesurer l’effet</h3>
+            <h3 class="about-how-cards__title">{{ $t("about.method.step3Title") }}</h3>
             <p class="about-how-cards__p">
-              Indicateurs, retours terrain, ajustements : l’amélioration continue fait partie du
-              métier.
+              {{ $t("about.method.step3Text") }}
             </p>
           </li>
         </ol>
@@ -103,17 +93,16 @@
 
   <IntroBandSection
     title-id="about-passions-title"
-    title="Centres d’intérêt"
-    eyebrow="Perso"
+    :title="$t('about.passions.title')"
+    :eyebrow="$t('about.passions.eyebrow')"
     stripe-class="about-page__stripe"
     body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
-      Une section visuelle dédiée : je peux y intégrer des photos personnelles pour
-      raconter mes passions en complément du parcours pro.
+      {{ $t("about.passions.text") }}
     </p>
     <template #after>
-      <div class="passions-carousel" aria-label="Carrousel centres d’intérêt">
+      <div class="passions-carousel" :aria-label="$t('about.passions.carouselAria')">
         <div class="passions-carousel__viewport">
           <ul class="passions-carousel__track" :style="carouselTrackStyle">
             <li
@@ -135,7 +124,7 @@
                     decoding="async"
                   />
                   <div v-else class="interests-card__placeholder">
-                    <span>Photo à ajouter</span>
+                    <span>{{ $t("about.passions.placeholder") }}</span>
                   </div>
                 </figure>
                 <div class="interests-card__body">
@@ -151,12 +140,12 @@
           <button
             type="button"
             class="passions-carousel__btn"
-            aria-label="Diapositive précédente"
+            :aria-label="$t('about.passions.prevAria')"
             @click="prevSlide"
           >
             ←
           </button>
-          <div class="passions-carousel__dots" role="tablist" aria-label="Aller à une diapositive">
+          <div class="passions-carousel__dots" role="tablist" :aria-label="$t('about.passions.dotsAria')">
             <button
               v-for="(interest, idx) in interests"
               :key="`dot-${interest.title}`"
@@ -165,14 +154,14 @@
               :class="{ 'passions-carousel__dot--active': idx === currentSlide }"
               role="tab"
               :aria-selected="idx === currentSlide"
-              :aria-label="`Voir ${interest.title}`"
+              :aria-label="$t('about.passions.seeSlide', { title: interest.title })"
               @click="goToSlide(idx)"
             />
           </div>
           <button
             type="button"
             class="passions-carousel__btn"
-            aria-label="Diapositive suivante"
+            :aria-label="$t('about.passions.nextAria')"
             @click="nextSlide"
           >
             →
@@ -184,13 +173,13 @@
 
   <main class="main" id="main">
     <div class="main__inner main__inner__personalized main__inner--about">
-      <section class="section section--homecta" aria-label="Pages liées">
+      <section class="section section--homecta" :aria-label="$t('subnav.linkedPages')">
         <PageSubnav
-          aria-label="Pages liées"
+          :aria-label="$t('subnav.linkedPages')"
           prev-to="/"
-          prev-label="← Accueil"
+          :prev-label="$t('subnav.homePrev')"
           next-to="/experiences"
-          next-label="Expériences →"
+          :next-label="$t('subnav.experiencesNext')"
         />
       </section>
     </div>
@@ -199,46 +188,48 @@
 
 <script setup>
 import { computed, ref } from "vue";
+import { useI18n } from "vue-i18n";
 import IntroBandSection from "@/components/IntroBandSection.vue";
 import PageSubnav from "@/components/PageSubnav.vue";
 import SectionHeadBlock from "@/components/SectionHeadBlock.vue";
 import StandardPageHero from "@/components/StandardPageHero.vue";
 
-const interests = [
+const { t } = useI18n();
+const interests = computed(() => [
   {
-    title: "Sport",
-    text: "Musculation, course à pied, randonnée, régularité et progression.",
+    title: t("about.interests.sportTitle"),
+    text: t("about.interests.sportText"),
     img: "/images/interests/rando.jpeg",
-    alt: "Photo sport",
+    alt: t("about.interests.sportAlt"),
   },
   {
-    title: "Tech & créa",
-    text: "Développement web/mobile, veille produit et design d’interface.",
+    title: t("about.interests.techTitle"),
+    text: t("about.interests.techText"),
     img: "/images/me.jpg",
-    alt: "Photo développement",
+    alt: t("about.interests.techAlt"),
   },
   {
-    title: "Culture & loisirs",
-    text: "Formule 1, cinéma et jeux vidéo.",
+    title: t("about.interests.cultureTitle"),
+    text: t("about.interests.cultureText"),
     img: "/images/interests/f1.jpeg",
-    alt: "Photo loisirs",
+    alt: t("about.interests.cultureAlt"),
   },
   {
-    title: "Engagement",
-    text: "Secouriste bénévole à la Croix-Blanche",
+    title: t("about.interests.engagementTitle"),
+    text: t("about.interests.engagementText"),
     img: "/images/interests/secourisme.jpeg",
-    alt: "Photo engagement et musique",
+    alt: t("about.interests.engagementAlt"),
   },
   {
-    title: "Musique",
-    text: "Autodidacte en chant, guitare, basse, ukulélé, piano.",
+    title: t("about.interests.musicTitle"),
+    text: t("about.interests.musicText"),
     img: "/images/interests/guitare.jpg",
-    alt: "Photo engagement et musique",
+    alt: t("about.interests.musicAlt"),
   },
-];
+]);
 
 const currentSlide = ref(0);
-const totalSlides = computed(() => interests.length || 1);
+const totalSlides = computed(() => interests.value.length || 1);
 const carouselTrackStyle = computed(() => ({
   transform: `translateX(-${currentSlide.value * 100}%)`,
 }));

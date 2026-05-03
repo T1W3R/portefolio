@@ -1,26 +1,25 @@
 <template>
   <StandardPageHero
     title-id="skills-hero-title"
-    kicker="Savoir-faire"
-    :title-lines="['Compétences']"
-    tagline="Technique, relationnel et langues : une vision rapide des outils que j’utilise et de ma manière de travailler."
+    :kicker="$t('competences.hero.kicker')"
+    :title-lines="[$t('competences.hero.title')]"
+    :tagline="$t('competences.hero.tagline')"
     accent-class="site-hero--skills-accent"
   >
     <template #actions>
-      <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-      <router-link class="btn btn--ghost" to="/a-propos">À propos de moi</router-link>
+      <router-link class="btn btn--primary" to="/contact">{{ $t("common.contactMe") }}</router-link>
+      <router-link class="btn btn--ghost" to="/a-propos">{{ $t("common.aboutMe") }}</router-link>
     </template>
   </StandardPageHero>
 
   <IntroBandSection
     title-id="skills-stripe-title"
-    title="Ce que j’apporte"
+    :title="$t('competences.stripe.title')"
     stripe-class="page__stripe"
     body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
-      Stack orientée produit, collaboration d’équipe et socle en data/IA : la section
-      ci-dessous va du concret (outils) au contexte (langues, soft skills).
+      {{ $t("competences.stripe.text") }}
     </p>
   </IntroBandSection>
 
@@ -29,14 +28,14 @@
       <section class="section section--tint section--skills-board" aria-labelledby="skills-board-title">
         <SectionHeadBlock
           title-id="skills-board-title"
-          eyebrow="Détails"
-          title="Stack &amp; profil"
-          lede="Une lecture rapide des outils techniques, des qualités de collaboration et des langues utilisées dans mes projets."
+          :eyebrow="$t('competences.head.eyebrow')"
+          :title="$t('competences.head.title')"
+          :lede="$t('competences.head.lede')"
         />
 
         <div class="bento">
         <div class="bento__item bento__item--wide">
-          <h2 class="bento__label">Stack &amp; outils</h2>
+          <h2 class="bento__label">{{ $t("competences.stackTitle") }}</h2>
           <ul class="stack-widgets" role="list">
             <li v-for="s in stack" :key="s.name" class="stack-widget" role="listitem">
               <img
@@ -53,16 +52,16 @@
           </ul>
         </div>
         <div class="bento__item">
-          <h2 class="bento__label">Soft skills</h2>
+          <h2 class="bento__label">{{ $t("competences.softTitle") }}</h2>
           <ul class="bento__ul">
-            <li>Esprit d’équipe</li>
-            <li>Perfectionniste</li>
-            <li>Méthodique, autonome, minutieux</li>
-            <li>Esprit d’initiative, volontaire, persévérant, curieux</li>
+            <li>{{ $t("competences.soft.team") }}</li>
+            <li>{{ $t("competences.soft.perfectionist") }}</li>
+            <li>{{ $t("competences.soft.methodic") }}</li>
+            <li>{{ $t("competences.soft.initiative") }}</li>
           </ul>
         </div>
         <div class="bento__item">
-          <h2 class="bento__label">Langues</h2>
+          <h2 class="bento__label">{{ $t("competences.langsTitle") }}</h2>
           <ul class="bento__langs">
             <li
               v-for="lang in langs"
@@ -88,11 +87,11 @@
       </section>
 
       <PageSubnav
-        aria-label="Pages liées"
+        :aria-label="$t('subnav.linkedPages')"
         prev-to="/formations"
-        prev-label="← Formations"
+        :prev-label="$t('subnav.formationsPrev')"
         next-to="/contact"
-        next-label="Contact →"
+        :next-label="$t('subnav.contactNext')"
       />
     </div>
   </main>
@@ -103,6 +102,10 @@ import IntroBandSection from "@/components/IntroBandSection.vue";
 import PageSubnav from "@/components/PageSubnav.vue";
 import SectionHeadBlock from "@/components/SectionHeadBlock.vue";
 import StandardPageHero from "@/components/StandardPageHero.vue";
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const stack = [
   { name: "Java", img: "/images/java.png" },
@@ -116,9 +119,9 @@ const stack = [
   { name: "React Native", img: "/images/react.png" },
 ];
 
-const langs = [
-  { name: "Français", level: "parlé (natif)", flag: "/images/flags/fr.svg", flagW: 30, flagH: 20 },
-  { name: "Anglais", level: "parlé", flag: "/images/flags/gb.svg", flagW: 30, flagH: 15 },
-  { name: "Espagnol", level: "compris", flag: "/images/flags/es.svg", flagW: 30, flagH: 20 },
-];
+const langs = computed(() => [
+  { name: t("competences.langs.french"), level: t("competences.langs.frenchLevel"), flag: "/images/flags/fr.svg", flagW: 30, flagH: 20 },
+  { name: t("competences.langs.english"), level: t("competences.langs.englishLevel"), flag: "/images/flags/gb.svg", flagW: 30, flagH: 15 },
+  { name: t("competences.langs.spanish"), level: t("competences.langs.spanishLevel"), flag: "/images/flags/es.svg", flagW: 30, flagH: 20 },
+]);
 </script>

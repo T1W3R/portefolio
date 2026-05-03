@@ -1,26 +1,25 @@
 <template>
   <StandardPageHero
     title-id="contact-hero-title"
-    kicker="Échange"
-    :title-lines="['Me contacter']"
-    tagline="Disponible pour en discuter : opportunité, question, collaboration."
+    :kicker="$t('contact.hero.kicker')"
+    :title-lines="[$t('contact.hero.title')]"
+    :tagline="$t('contact.hero.tagline')"
     accent-class="site-hero--contact-accent"
   >
     <template #actions>
-      <a class="btn btn--primary" href="mailto:werquin.timothe@gmail.com">M’écrire</a>
-      <router-link class="btn btn--ghost" to="/competences">Mes compétences</router-link>
+      <a class="btn btn--primary" href="mailto:werquin.timothe@gmail.com">{{ $t("contact.writeMe") }}</a>
+      <router-link class="btn btn--ghost" to="/competences">{{ $t("common.skills") }}</router-link>
     </template>
   </StandardPageHero>
 
   <IntroBandSection
     title-id="contact-stripe-title"
-    title="Parlons concret"
+    :title="$t('contact.stripe.title')"
     stripe-class="page__stripe"
     body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
-      Vous pouvez me joindre par mail, téléphone, LinkedIn ou GitHub. Je réponds
-      rapidement, en général sous quelques jours ouvrés.
+      {{ $t("contact.stripe.text") }}
     </p>
   </IntroBandSection>
 
@@ -29,16 +28,16 @@
       <section class="section section--tint section--contact-board" aria-labelledby="contact-board-title">
         <SectionHeadBlock
           title-id="contact-board-title"
-          eyebrow="Coordonnées"
-          title="Contactez-moi"
-          lede="Un message suffit. Je reviens vers vous dès que possible."
+          :eyebrow="$t('contact.head.eyebrow')"
+          :title="$t('contact.head.title')"
+          :lede="$t('contact.head.lede')"
         />
 
         <div class="contact-cta contact-cta--page">
           <div class="contact-cta__text">
-            <h3 class="contact-cta__title">Canaux directs</h3>
+            <h3 class="contact-cta__title">{{ $t("contact.directTitle") }}</h3>
             <p class="contact-cta__p">
-              Mail prioritaire, puis téléphone et réseaux pros selon votre préférence.
+              {{ $t("contact.directText") }}
             </p>
           </div>
           <div class="contact-cta__actions contact-cta__actions--stack">
@@ -51,33 +50,31 @@
               href="https://www.linkedin.com/in/werquin-timothe"
               rel="noopener noreferrer"
               target="_blank"
-              >LinkedIn</a
+              >{{ $t("common.linkedin") }}</a
             >
             <a
               class="btn btn--outline"
               href="https://github.com/T1W3R?tab=repositories"
               rel="noopener noreferrer"
               target="_blank"
-              >GitHub</a
+              >{{ $t("common.github") }}</a
             >
           </div>
         </div>
 
         <p class="page-lede">
-          Vous préférez un <strong>formulaire intégré</strong> (envoi côté serveur) plutôt
-          que le mail client ? Il peut être ajouté côté serveur (mail, validation, antispam)
-          lorsque vous le souhaitez.
+          {{ $t("contact.formInfo") }}
         </p>
 
         
       </section>
-      <section class="section section--homecta" aria-label="Pages liées">
+      <section class="section section--homecta" :aria-label="$t('subnav.linkedPages')">
         <PageSubnav
-          aria-label="Pages liées"
+          :aria-label="$t('subnav.linkedPages')"
           prev-to="/competences"
-          prev-label="← Compétences"
+          :prev-label="$t('subnav.skillsPrev')"
           next-to="/"
-          next-label="Accueil →"
+          :next-label="$t('subnav.homeNext')"
         />
       </section>
     </div>

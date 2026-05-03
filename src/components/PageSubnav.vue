@@ -7,7 +7,7 @@
 
 <script setup>
 defineProps({
-  ariaLabel: { type: String, default: "Pages liées" },
+  ariaLabel: { type: String, default: "" },
   prevTo: { type: String, required: true },
   prevLabel: { type: String, required: true },
   nextTo: { type: String, required: true },

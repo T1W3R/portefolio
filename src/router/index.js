@@ -11,9 +11,8 @@ const routes = [
         name: "home",
         component: () => import("@/views/HomeView.vue"),
         meta: {
-          title: "Accueil",
-          description:
-            "Développeur full stack, Data, IA — portfolio de Timothé Werquin.",
+          titleKey: "routes.home.title",
+          descriptionKey: "routes.home.description",
           bodyClass: "site--home",
         },
       },
@@ -22,9 +21,8 @@ const routes = [
         name: "about",
         component: () => import("@/views/AboutView.vue"),
         meta: {
-          title: "À propos",
-          description:
-            "Présentation, valeurs et manière de travailler — Timothé Werquin.",
+          titleKey: "routes.about.title",
+          descriptionKey: "routes.about.description",
         },
       },
       {
@@ -32,9 +30,8 @@ const routes = [
         name: "experiences",
         component: () => import("@/views/ExperiencesView.vue"),
         meta: {
-          title: "Expériences pro",
-          description:
-            "Parcours professionnel Elonet, Renault — développeur full stack, Timothé Werquin.",
+          titleKey: "routes.experiences.title",
+          descriptionKey: "routes.experiences.description",
         },
       },
       {
@@ -42,9 +39,8 @@ const routes = [
         name: "formations",
         component: () => import("@/views/FormationsView.vue"),
         meta: {
-          title: "Formations",
-          description:
-            "Epitech, EPSI, BTS SIO, baccalauréat — parcours de Timothé Werquin.",
+          titleKey: "routes.formations.title",
+          descriptionKey: "routes.formations.description",
         },
       },
       {
@@ -52,9 +48,8 @@ const routes = [
         name: "competences",
         component: () => import("@/views/CompetencesView.vue"),
         meta: {
-          title: "Compétences",
-          description:
-            "Stack technique, soft skills, langues — compétences de Timothé Werquin.",
+          titleKey: "routes.competences.title",
+          descriptionKey: "routes.competences.description",
         },
       },
       {
@@ -62,9 +57,8 @@ const routes = [
         name: "contact",
         component: () => import("@/views/ContactView.vue"),
         meta: {
-          title: "Contact",
-          description:
-            "Contacter Timothé Werquin — e-mail, téléphone, LinkedIn, GitHub, Lille.",
+          titleKey: "routes.contact.title",
+          descriptionKey: "routes.contact.description",
         },
       },
     ],

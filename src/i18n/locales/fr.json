@@ -1,0 +1,331 @@
+{
+  "common": {
+    "portfolio": "Portfolio",
+    "name": "Timothé Werquin",
+    "firstName": "Timothé",
+    "lastName": "Werquin",
+    "linkedin": "Profil LinkedIn",
+    "github": "GitHub",
+    "downloadCv": "Télécharger mon CV (PDF)",
+    "contactMe": "Me contacter",
+    "aboutMe": "À propos de moi",
+    "skills": "Mes compétences",
+    "formations": "Mes formations",
+    "seeSite": "Voir le site",
+    "language": "Langue",
+    "languageFr": "Français",
+    "languageEn": "Anglais"
+  },
+  "meta": {
+    "titleSuffix": "Timothé Werquin"
+  },
+  "routes": {
+    "defaultTitle": "Accueil",
+    "home": {
+      "title": "Accueil",
+      "description": "Développeur full stack, Data, IA — portfolio de Timothé Werquin."
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Présentation, valeurs et manière de travailler — Timothé Werquin."
+    },
+    "experiences": {
+      "title": "Expériences pro",
+      "description": "Parcours professionnel Elonet, Renault — développeur full stack, Timothé Werquin."
+    },
+    "formations": {
+      "title": "Formations",
+      "description": "Epitech, EPSI, BTS SIO, baccalauréat — parcours de Timothé Werquin."
+    },
+    "competences": {
+      "title": "Compétences",
+      "description": "Stack technique, soft skills, langues — compétences de Timothé Werquin."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contacter Timothé Werquin — e-mail, téléphone, LinkedIn, GitHub, Lille."
+    }
+  },
+  "layout": {
+    "skipToContent": "Aller au contenu"
+  },
+  "nav": {
+    "main": "Navigation principale",
+    "home": "Accueil",
+    "about": "À propos",
+    "experiences": "Expériences",
+    "formations": "Formations",
+    "competences": "Compétences",
+    "contact": "Contact",
+    "backHome": "Retour à l'accueil",
+    "openMenu": "Ouvrir le menu"
+  },
+  "footer": {
+    "city": "Lille, France"
+  },
+  "home": {
+    "heroAria": "Présentation",
+    "kicker": "Ingénieur développement logiciel",
+    "taglineDev": "Développeur Full Stack",
+    "metaAria": "Coordonnées",
+    "photoPlaceholderAria": "Espace portrait (photo à ajouter)",
+    "scrollAria": "Faire défiler vers Explorer le portfolio",
+    "whoTitle": "Qui suis-je ?",
+    "intro": "Chaque page détaille un pan de mon parcours : expériences pro, formations, compétences, et un fil direct pour m’écrire. J’aime les outils utiles, le travail bien cadré, et le lien avec les besoins réels des équipes.",
+    "exploreTitle": "Explorer le portfolio",
+    "exploreLede": "Rubriques modulaires — un peu comme un tableau de bord éditorial.",
+    "cards": {
+      "aboutEyebrow": "Profil & valeurs",
+      "aboutTitle": "À propos",
+      "aboutHint": "Qui je suis, comment je travaille, ce qui m’anime.",
+      "formationsEyebrow": "Parcours académique",
+      "formationsTitle": "Formations",
+      "formationsHint": "Epitech, EPSI, BTS, bac, spécialisations.",
+      "expEyebrow": "Missions & contextes",
+      "expTitle": "Expériences professionnelles",
+      "expHint": "Elonet, Renault, stacks et responsabilités détaillées.",
+      "skillsEyebrow": "Stack & humain",
+      "skillsTitle": "Compétences",
+      "skillsHint": "Technos, soft skills, langues, centres d’intérêt.",
+      "contactEyebrow": "Échange",
+      "contactTitle": "Contact",
+      "contactHint": "Mail, téléphone, prise de contact rapide."
+    },
+    "cta": {
+      "bodyStart": "En recherche d’",
+      "strongTools": "outils concrets",
+      "middle": " et d’",
+      "strongImpact": "impact utilisateur",
+      "bodyEnd": " — de la data au front, de l’agilité à la qualité. Si vous avez un rôle, un projet ou une idée, rendez-vous sur la page Contact.",
+      "button": "Contacter"
+    }
+  },
+  "about": {
+    "hero": {
+      "kicker": "Profil & valeurs",
+      "titleLine1": "À",
+      "titleLine2": "propos",
+      "tagline": "Agilité, produit, sport & performance — le fil qui guide mon travail."
+    },
+    "actions": {
+      "experiences": "Voir mes expériences"
+    },
+    "stripe": {
+      "title": "Du terrain au backlog",
+      "text": "La même exigence que sur un WOD ou une revue de sprint : progression mesurable, régularité, communication claire. J’aime qu’on sache où on va — et pourquoi."
+    },
+    "bio": {
+      "eyebrow": "Bio",
+      "title": "Ma présentation",
+      "lede": "Développeur orienté impact et collaboration — du besoin utilisateur au déploiement.",
+      "text": "Ingénieur développement logiciel, passionné de sport & performance. Full stack (Python, PHP, React), j’ai grandi en méthodologie agile chez Elonet : rigueur, autonomie, esprit d’équipe. J’aime bâtir des outils utiles, de la prise de besoin au déploiement, et contribuer à rendre le sport accessible à tous lorsque le contexte s’y prête."
+    },
+    "values": {
+      "aria": "Valeurs clés",
+      "practiceLabel": "Pratique",
+      "practiceText": "Méthodes agiles — Scrum, itérations courtes",
+      "qualityLabel": "Qualité",
+      "qualityText": "Produit, code, tests",
+      "horizonLabel": "Horizon",
+      "horizonText": "Data, IA, industrialisation"
+    },
+    "method": {
+      "eyebrow": "Méthode",
+      "title": "Comment je travaille",
+      "lede": "Transparence, proactivité, feedback — en trois temps.",
+      "aria": "Principes de travail",
+      "step1Title": "Clarifier le besoin",
+      "step1Text": "Ateliers, questions, priorisation : avant d’écrire du code, j’aligne la valeur attendue avec les parties prenantes.",
+      "step2Title": "Livrer en confiance",
+      "step2Text": "Déploiements progressifs, revues, documentation légère : l’équipe et les utilisateurs s’y retrouvent.",
+      "step3Title": "Mesurer l’effet",
+      "step3Text": "Indicateurs, retours terrain, ajustements : l’amélioration continue fait partie du métier."
+    },
+    "passions": {
+      "title": "Centres d’intérêt",
+      "eyebrow": "Perso",
+      "text": "Une section visuelle dédiée : je peux y intégrer des photos personnelles pour raconter mes passions en complément du parcours pro.",
+      "carouselAria": "Carrousel centres d’intérêt",
+      "placeholder": "Photo à ajouter",
+      "prevAria": "Diapositive précédente",
+      "dotsAria": "Aller à une diapositive",
+      "nextAria": "Diapositive suivante",
+      "seeSlide": "Voir {title}"
+    },
+    "interests": {
+      "sportTitle": "Sport",
+      "sportText": "Musculation, course à pied, randonnée, régularité et progression.",
+      "sportAlt": "Photo sport",
+      "techTitle": "Tech & créa",
+      "techText": "Développement web/mobile, veille produit et design d’interface.",
+      "techAlt": "Photo développement",
+      "cultureTitle": "Culture & loisirs",
+      "cultureText": "Formule 1, cinéma et jeux vidéo.",
+      "cultureAlt": "Photo loisirs",
+      "engagementTitle": "Engagement",
+      "engagementText": "Secouriste bénévole à la Croix-Blanche",
+      "engagementAlt": "Photo engagement et musique",
+      "musicTitle": "Musique",
+      "musicText": "Autodidacte en chant, guitare, basse, ukulélé, piano.",
+      "musicAlt": "Photo engagement et musique"
+    }
+  },
+  "experiences": {
+    "hero": {
+      "kicker": "Parcours professionnel",
+      "line1": "Expériences",
+      "line2": "professionnelles",
+      "tagline": "Alternance, stage industriel — Elonet & Renault. Missions agiles, modules métiers, et production en temps réel."
+    },
+    "stripe": {
+      "title": "Deux contextes",
+      "text": "Chez Elonet : cycles courts, clients B2B, produit autour de Dolibarr et d’interfaces sur mesure. Chez Renault : contraintes d’usine, données de prod, Symfony et exigence de fiabilité."
+    },
+    "head": {
+      "eyebrow": "Détails",
+      "title": "Choisir une mission",
+      "lede": "Basculer entre l’alternance longue (Elonet) et le stage en milieu industriel (Renault)."
+    },
+    "tabsAria": "Choisir une expérience",
+    "elonet": {
+      "eyebrow": "Alternance · Agile · Produits métiers",
+      "title": "Développeur full stack — alternant",
+      "dates": "jan. 2023 — fév. 2026",
+      "evolutionTitle": "Évolution au sein de l'entreprise.",
+      "evolutionText": "Étant d'abord entré pour un stage de fin de BTS SIO, j'ai ensuite été embauché en tant que développeur full stack pour un CDD pendant les vacances qui ont suivi. Désireux de poursuivre l'aventure, j'ai été embauché en alternance afin de continuer mes études jusqu'à la fin de celles-ci.",
+      "internalTitle": "Projets internes.",
+      "internalText": "Outils métiers en équipe agile ; interfaces Vue.js & React ; backends Python & PHP ; modules pour CRM Dolibarr — même exigence produit du backlog au déploiement.",
+      "clientTitle": "Projets clients.",
+      "clientText": "Solutions sur mesure du cadrage au déploiement ; binôme ou autonomie, avec une vision claire des délais et de la qualité livrée.",
+      "projectsTitle": "Réalisations visibles en ligne",
+      "project1Desc": "Modules PHP pour Dolibarr pour les clients externes de la plateforme — besoins métier, intégrations et livraisons maintenables.",
+      "project2Desc": "Mission en autonomie : échanges directs avec le client, cadrage et livraison — premier contexte où j’ai piloté la relation client de bout en bout.",
+      "noteTitle": "Note.",
+      "noteText": "Deux autres livraisons ne sont plus illustrables en ligne : liquidation judiciaire du client et résiliation des hébergements — anciennes URLs indisponibles.",
+      "stackHead": "Stack principale",
+      "stackLine": "Python (Django, Flask), PHP (Laravel, Symfony), React, Vue.js, SQL",
+      "techAria": "Technos"
+    },
+    "renault": {
+      "eyebrow": "Stage · Service informatique / montage · Temps réel",
+      "title": "Développeur full stack — stagiaire",
+      "dates": "23 mai — 1 juil. 2022 · 6 semaines",
+      "mediaAlt": "Vue aérienne du site Renault ElectriCity à Maubeuge",
+      "mediaCaptionPrefix": "Site Renault ElectriCity — Maubeuge · source",
+      "missionTitle": "Mission principale.",
+      "missionText": "Développement d'un affichage du rendement des unités, avec une visualisation en temps réel des indicateurs de production (OEE / TRS) sur les lignes.",
+      "backTitle": "Back & intégration.",
+      "backText": "Logique métier avec Symfony 5, connexion aux logiciels internes de l’usine, données fiables pour le pilotage.",
+      "highlightsAria": "Points marquants",
+      "highlight1": "Tableaux de bord opérateurs mis à jour sans perturber la cadence des lignes.",
+      "highlight2": "Données brutes progressivement transformées en indicateurs exploitables par la hiérarchie d’atelier.",
+      "stackHead": "Technologies & contexte",
+      "contextLabel": "Contexte usine",
+      "techAria": "Technos"
+    }
+  },
+  "formations": {
+    "hero": {
+      "kicker": "Cursus",
+      "title": "Formations",
+      "tagline": "Du bac au MSc — sciences, développement, puis data & IA. Les détails du programme sont sur les sites des établissements ; les liens ci-dessous renvoient vers les bons angles."
+    },
+    "stripe": {
+      "title": "Un fil continu",
+      "text": "Chaque carte associe un lieu (photo du secteur ou du cadre), les infos qui restent sur votre CV, et deux sorties : la fiche formation pour le contenu pédagogique, le site de l’école pour le campus et les admissions."
+    },
+    "head": {
+      "eyebrow": "Parcours",
+      "title": "Diplômes & lieux",
+      "lede": "Cliquez les libellés pour ouvrir les sources officielles — pas besoin de tout recopier ici."
+    },
+    "listAria": "Liste des formations",
+    "officialSource": "Formation (source officielle)",
+    "school": "Établissement",
+    "certsHead": {
+      "eyebrow": "Compléments",
+      "title": "Autres certifications",
+      "lede": "Certifications en cybersécurité, aéronautique et secourisme."
+    },
+    "certsAria": "Liste des autres certifications",
+    "items": {
+      "mscTitle": "MSC pro — Big Data & IA",
+      "epsiTitle": "Titre pro concepteur développeur d’applications — niv. II (NSF 326t)",
+      "btsTitle": "BTS SIO — spécialité SLAM",
+      "bacTitle": "Baccalauréat — spécialités Mathématiques, SI"
+    },
+    "certifications": {
+      "secnum": "Attestation en cybersécurité",
+      "bia": "Brevet d’Initiation Aéronautique",
+      "pse2": "Brevet d’Équipier Secouriste niveau 2",
+      "pse1": "Brevet d’Équipier Secouriste niveau 1",
+      "psc1": "Prévention et Secours Civiques de niveau 1"
+    }
+  },
+  "competences": {
+    "hero": {
+      "kicker": "Savoir-faire",
+      "title": "Compétences",
+      "tagline": "Technique, relationnel et langues : une vision rapide des outils que j’utilise et de ma manière de travailler."
+    },
+    "stripe": {
+      "title": "Ce que j’apporte",
+      "text": "Stack orientée produit, collaboration d’équipe et socle en data/IA : la section ci-dessous va du concret (outils) au contexte (langues, soft skills)."
+    },
+    "head": {
+      "eyebrow": "Détails",
+      "title": "Stack & profil",
+      "lede": "Une lecture rapide des outils techniques, des qualités de collaboration et des langues utilisées dans mes projets."
+    },
+    "stackTitle": "Stack & outils",
+    "softTitle": "Soft skills",
+    "langsTitle": "Langues",
+    "soft": {
+      "team": "Esprit d’équipe",
+      "perfectionist": "Perfectionniste",
+      "methodic": "Méthodique, autonome, minutieux",
+      "initiative": "Esprit d’initiative, volontaire, persévérant, curieux"
+    },
+    "langs": {
+      "french": "Français",
+      "frenchLevel": "parlé (natif)",
+      "english": "Anglais",
+      "englishLevel": "parlé",
+      "spanish": "Espagnol",
+      "spanishLevel": "compris"
+    }
+  },
+  "contact": {
+    "hero": {
+      "kicker": "Échange",
+      "title": "Me contacter",
+      "tagline": "Disponible pour en discuter : opportunité, question, collaboration."
+    },
+    "writeMe": "M’écrire",
+    "stripe": {
+      "title": "Parlons concret",
+      "text": "Vous pouvez me joindre par mail, téléphone, LinkedIn ou GitHub. Je réponds rapidement, en général sous quelques jours ouvrés."
+    },
+    "head": {
+      "eyebrow": "Coordonnées",
+      "title": "Contactez-moi",
+      "lede": "Un message suffit. Je reviens vers vous dès que possible."
+    },
+    "directTitle": "Canaux directs",
+    "directText": "Mail prioritaire, puis téléphone et réseaux pros selon votre préférence.",
+    "formInfo": "Vous préférez un formulaire intégré (envoi côté serveur) plutôt que le mail client ? Il peut être ajouté côté serveur (mail, validation, antispam) lorsque vous le souhaitez."
+  },
+  "subnav": {
+    "linkedPages": "Pages liées",
+    "aboutPrev": "← À propos",
+    "homePrev": "← Accueil",
+    "expPrev": "← Expériences",
+    "formationsPrev": "← Formations",
+    "skillsPrev": "← Compétences",
+    "formationsNext": "Formations →",
+    "skillsNext": "Compétences →",
+    "contactNext": "Contact →",
+    "homeNext": "Accueil →",
+    "experiencesNext": "Expériences →"
+  }
+}

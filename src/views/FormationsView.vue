@@ -1,27 +1,25 @@
 <template>
   <StandardPageHero
     title-id="form-hero-title"
-    kicker="Cursus"
-    :title-lines="['Formations']"
-    tagline="Du bac au MSc — sciences, développement, puis data &amp; IA. Les détails du programme sont sur les sites des établissements ; les liens ci-dessous renvoient vers les bons angles."
+    :kicker="$t('formations.hero.kicker')"
+    :title-lines="[$t('formations.hero.title')]"
+    :tagline="$t('formations.hero.tagline')"
     accent-class="site-hero--formations-accent"
   >
     <template #actions>
-      <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-      <router-link class="btn btn--ghost" to="/competences">Mes compétences</router-link>
+      <router-link class="btn btn--primary" to="/contact">{{ $t("common.contactMe") }}</router-link>
+      <router-link class="btn btn--ghost" to="/competences">{{ $t("common.skills") }}</router-link>
     </template>
   </StandardPageHero>
 
   <IntroBandSection
     title-id="form-stripe-title"
-    title="Un fil continu"
+    :title="$t('formations.stripe.title')"
     stripe-class="page__stripe"
     body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
-      Chaque carte associe un lieu (photo du secteur ou du cadre), les infos qui restent sur votre CV,
-      et deux sorties&nbsp;: la <strong>fiche formation</strong> pour le contenu pédagogique, le
-      <strong>site de l’école</strong> pour le campus et les admissions.
+      {{ $t("formations.stripe.text") }}
     </p>
   </IntroBandSection>
 
@@ -30,12 +28,12 @@
       <section class="section section--tint section--formations-list" aria-labelledby="form-list-title">
         <SectionHeadBlock
           title-id="form-list-title"
-          eyebrow="Parcours"
-          title="Diplômes &amp; lieux"
-          lede="Cliquez les libellés pour ouvrir les sources officielles — pas besoin de tout recopier ici."
+          :eyebrow="$t('formations.head.eyebrow')"
+          :title="$t('formations.head.title')"
+          :lede="$t('formations.head.lede')"
         />
 
-        <ul class="formations-grid" aria-label="Liste des formations">
+        <ul class="formations-grid" :aria-label="$t('formations.listAria')">
           <li v-for="f in formations" :key="f.id" class="formations-grid__cell">
             <article
               class="formation-card"
@@ -75,7 +73,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span class="formation-card__link-text">Formation (source officielle)</span>
+                    <span class="formation-card__link-text">{{ $t("formations.officialSource") }}</span>
                     <span class="formation-card__ext" aria-hidden="true">↗</span>
                   </a>
                   <a
@@ -84,7 +82,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <span class="formation-card__link-text">Établissement</span>
+                    <span class="formation-card__link-text">{{ $t("formations.school") }}</span>
                     <span class="formation-card__ext" aria-hidden="true">↗</span>
                   </a>
                 </div>
@@ -97,12 +95,12 @@
       <section class="section section--formations-certs" aria-labelledby="form-certs-title">
         <SectionHeadBlock
           title-id="form-certs-title"
-          eyebrow="Compléments"
-          title="Autres certifications"
-          lede="Certifications en cybersécurité, aéronautique et secourisme."
+          :eyebrow="$t('formations.certsHead.eyebrow')"
+          :title="$t('formations.certsHead.title')"
+          :lede="$t('formations.certsHead.lede')"
         />
 
-        <ul class="formations-certs" aria-label="Liste des autres certifications">
+        <ul class="formations-certs" :aria-label="$t('formations.certsAria')">
           <li
             v-for="certification in certifications"
             :key="certification.acronym"
@@ -116,13 +114,13 @@
         </ul>
       </section>
 
-      <section class="section section--homecta" aria-label="Navigation">
+      <section class="section section--homecta" :aria-label="$t('subnav.linkedPages')">
         <PageSubnav
-          aria-label="Pages liées"
+          :aria-label="$t('subnav.linkedPages')"
           prev-to="/experiences"
-          prev-label="← Expériences"
+          :prev-label="$t('subnav.expPrev')"
           next-to="/competences"
-          next-label="Compétences →"
+          :next-label="$t('subnav.skillsNext')"
         />
       </section>
     </div>
@@ -134,12 +132,16 @@ import IntroBandSection from "@/components/IntroBandSection.vue";
 import PageSubnav from "@/components/PageSubnav.vue";
 import SectionHeadBlock from "@/components/SectionHeadBlock.vue";
 import StandardPageHero from "@/components/StandardPageHero.vue";
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 
-const formations = [
+const { t } = useI18n();
+
+const formations = computed(() => [
   {
     id: "msc",
     years: "2024 — 2026",
-    title: "MSC pro — Big Data & IA",
+    title: t("formations.items.mscTitle"),
     school: "Epitech",
     campus: "Lille",
     photo: "/images/formations/epitech-lille.jpg",
@@ -151,7 +153,7 @@ const formations = [
   {
     id: "epsi",
     years: "2023 — 2024",
-    title: "Titre pro concepteur développeur d’applications — niv. II (NSF 326t)",
+    title: t("formations.items.epsiTitle"),
     school: "EPSI",
     campus: "Lille",
     photo: "https://sarcdprodstrapi.blob.core.windows.net/strapi-media/assets/20220226_132039_2048x1536_974446e018.jpg",
@@ -164,7 +166,7 @@ const formations = [
   {
     id: "bts",
     years: "2021 — 2023",
-    title: "BTS SIO — spécialité SLAM",
+    title: t("formations.items.btsTitle"),
     school: "Lycée Guy de Dampierre",
     campus: "Valenciennes",
     photo: "/images/formations/dampierre.jpg",
@@ -176,7 +178,7 @@ const formations = [
   {
     id: "bac",
     years: "2021",
-    title: "Baccalauréat — spécialités Mathématiques, SI",
+    title: t("formations.items.bacTitle"),
     school: "Lycée Notre-Dame de Grâce",
     campus: "Maubeuge",
     photo: "/images/formations/maubeuge.jpg",
@@ -186,28 +188,28 @@ const formations = [
       "https://www.service-public.gouv.fr/particuliers/vosdroits/F10029",
     schoolUrl: "https://notredamedelasambre.org/lycee-notre-dame-de-grace/",
   },
-];
+]);
 
-const certifications = [
+const certifications = computed(() => [
   {
     acronym: "SECNUM",
-    label: "Attestation en Cybersécurité",
+    label: t("formations.certifications.secnum"),
   },
   {
     acronym: "BIA",
-    label: "Brevet d’Initiation Aéronautique",
+    label: t("formations.certifications.bia"),
   },
   {
     acronym: "PSE2",
-    label: "Brevet d’Équipier Secouriste niveau 2",
+    label: t("formations.certifications.pse2"),
   },
   {
     acronym: "PSE1",
-    label: "Brevet d’Équipier Secouriste niveau 1",
+    label: t("formations.certifications.pse1"),
   },
   {
     acronym: "PSC1",
-    label: "Prévention et Secours Civiques de niveau 1",
+    label: t("formations.certifications.psc1"),
   },
-];
+]);
 </script>

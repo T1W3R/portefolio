@@ -1,28 +1,26 @@
 <template>
   <StandardPageHero
     title-id="exp-hero-title"
-    kicker="Parcours professionnel"
-    :title-lines="['Expériences', 'professionnelles']"
+    :kicker="$t('experiences.hero.kicker')"
+    :title-lines="[$t('experiences.hero.line1'), $t('experiences.hero.line2')]"
     :title-line-styles="[null, { whiteSpace: 'wrap' }]"
-    tagline="Alternance, stage industriel — Elonet &amp; Renault. Missions agiles, modules métiers, et production en temps réel."
+    :tagline="$t('experiences.hero.tagline')"
     accent-class="site-hero--exp-accent"
   >
     <template #actions>
-      <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-      <router-link class="btn btn--ghost" to="/formations">Mes formations</router-link>
+      <router-link class="btn btn--primary" to="/contact">{{ $t("common.contactMe") }}</router-link>
+      <router-link class="btn btn--ghost" to="/formations">{{ $t("common.formations") }}</router-link>
     </template>
   </StandardPageHero>
 
   <IntroBandSection
     title-id="exp-stripe-heading"
-    title="Deux contextes"
+    :title="$t('experiences.stripe.title')"
     stripe-class="page__stripe"
     body-class="page__stripe-body"
   >
     <p class="home-intro-band__p">
-      Chez <strong>Elonet</strong> : cycles courts, clients B2B, produit autour de
-      Dolibarr et d’interfaces sur mesure.<br> Chez <strong>Renault</strong> :
-      contraintes d’usine, données de prod, Symfony et exigence de fiabilité.
+      {{ $t("experiences.stripe.text") }}
     </p>
   </IntroBandSection>
 
@@ -34,13 +32,13 @@
       >
         <SectionHeadBlock
           title-id="exp-tabs-title"
-          eyebrow="Détails"
-          title="Choisir une mission"
-          lede="Basculer entre l’alternance longue (Elonet) et le stage en milieu industriel (Renault)."
+          :eyebrow="$t('experiences.head.eyebrow')"
+          :title="$t('experiences.head.title')"
+          :lede="$t('experiences.head.lede')"
         />
 
         <div class="exp-switch" data-exp-switch>
-          <div class="exp-switch__tabs" role="tablist" aria-label="Choisir une expérience">
+          <div class="exp-switch__tabs" role="tablist" :aria-label="$t('experiences.tabsAria')">
             <button
               v-for="(t, i) in tabs"
               :key="t.id"
@@ -87,12 +85,12 @@
                     decoding="async"
                   />
                   <div class="exp-elonet__hero-text">
-                    <p class="exp-elonet__eyebrow">Alternance · Agile · Produits métiers</p>
+                    <p class="exp-elonet__eyebrow">{{ $t("experiences.elonet.eyebrow") }}</p>
                     <h3 id="elonet-title" class="exp-elonet__title">
-                      Développeur full stack — alternant
+                      {{ $t("experiences.elonet.title") }}
                     </h3>
                     <p class="exp-elonet__dates">
-                      jan. 2023 — fév. 2026 · <span class="exp-elonet__company">Elonet</span>
+                      {{ $t("experiences.elonet.dates") }} · <span class="exp-elonet__company">Elonet</span>
                     </p>
                   </div>
                 </header>
@@ -100,25 +98,22 @@
                 <div class="exp-elonet__body">
                   <div class="exp-elonet__intro">
                     <p class="exp-elonet__lead">
-                      <strong class="exp-elonet__strong">Évolution au sein de l'entreprise.</strong>
-                      Étant d'abord entré pour un stage de fin de BTS SIO, j'ai ensuite été embauché en tant que développeur full stack pour un CDD pendant les vacances qui ont suivi. Désireux de poursuivre l'aventure, j'ai été embauché en alternance afin de continuer mes études jusqu'à la fin de celles-ci.
+                      <strong class="exp-elonet__strong">{{ $t("experiences.elonet.evolutionTitle") }}</strong>
+                      {{ $t("experiences.elonet.evolutionText") }}
                     </p>
                     <p class="exp-elonet__lead">
-                      <strong class="exp-elonet__strong">Projets internes.</strong>
-                      Outils métiers en équipe agile ; interfaces Vue.js &amp; React ; backends
-                      Python &amp; PHP ; modules pour CRM Dolibarr — même exigence produit du
-                      backlog au déploiement.
+                      <strong class="exp-elonet__strong">{{ $t("experiences.elonet.internalTitle") }}</strong>
+                      {{ $t("experiences.elonet.internalText") }}
                     </p>
                     <p class="exp-elonet__lead">
-                      <strong class="exp-elonet__strong">Projets clients.</strong>
-                      Solutions sur mesure du cadrage au déploiement ; binôme ou autonomie,
-                      avec une vision claire des délais et de la qualité livrée.
+                      <strong class="exp-elonet__strong">{{ $t("experiences.elonet.clientTitle") }}</strong>
+                      {{ $t("experiences.elonet.clientText") }}
                     </p>
                   </div>
 
                   <section class="exp-elonet__projects" aria-labelledby="elonet-projects-h">
                     <h4 id="elonet-projects-h" class="exp-elonet__projects-heading">
-                      Réalisations visibles en ligne
+                      {{ $t("experiences.elonet.projectsTitle") }}
                     </h4>
                     <div class="exp-elonet__tiles">
                       <a
@@ -144,11 +139,10 @@
                           </span>
                         </div>
                         <p class="exp-elonet__tile-desc">
-                          Modules PHP pour Dolibarr pour les clients externes de la plateforme —
-                          besoins métier, intégrations et livraisons maintenables.
+                          {{ $t("experiences.elonet.project1Desc") }}
                         </p>
                         <span class="exp-elonet__tile-cta">
-                          Voir le site
+                          {{ $t("common.seeSite") }}
                           <span aria-hidden="true">↗</span>
                         </span>
                       </a>
@@ -176,12 +170,10 @@
                           </span>
                         </div>
                         <p class="exp-elonet__tile-desc">
-                          Mission en autonomie : échanges directs avec le client, cadrage et
-                          livraison — premier contexte où j’ai piloté la relation client de bout
-                          en bout.
+                          {{ $t("experiences.elonet.project2Desc") }}
                         </p>
                         <span class="exp-elonet__tile-cta">
-                          Voir le site
+                          {{ $t("common.seeSite") }}
                           <span aria-hidden="true">↗</span>
                         </span>
                       </a>
@@ -189,18 +181,16 @@
                   </section>
 
                   <p class="exp-elonet__footnote" role="note">
-                    <strong>Note.</strong>
-                    Deux autres livraisons ne sont plus illustrables en ligne : liquidation
-                    judiciaire du client et résiliation des hébergements — anciennes URLs
-                    indisponibles.
+                    <strong>{{ $t("experiences.elonet.noteTitle") }}</strong>
+                    {{ $t("experiences.elonet.noteText") }}
                   </p>
 
                   <footer class="exp-elonet__footer">
-                    <p class="exp-elonet__stack-head">Stack principale</p>
+                    <p class="exp-elonet__stack-head">{{ $t("experiences.elonet.stackHead") }}</p>
                     <p class="exp-elonet__stack-line">
-                      Python (Django, Flask), PHP (Laravel, Symfony), React, Vue.js, SQL
+                      {{ $t("experiences.elonet.stackLine") }}
                     </p>
-                    <ul class="pills pills--elonet" aria-label="Technos">
+                    <ul class="pills pills--elonet" :aria-label="$t('experiences.elonet.techAria')">
                       <li>Python</li>
                       <li>PHP</li>
                       <li>React</li>
@@ -232,13 +222,13 @@
                   />
                   <div class="exp-renault__hero-text">
                     <p class="exp-renault__eyebrow">
-                      Stage · Service informatique / montage · Temps réel
+                      {{ $t("experiences.renault.eyebrow") }}
                     </p>
                     <h3 id="renault-title" class="exp-renault__title">
-                      Développeur full stack — stagiaire
+                      {{ $t("experiences.renault.title") }}
                     </h3>
                     <p class="exp-renault__dates">
-                      23 mai — 1 juil. 2022 · 6 semaines ·
+                      {{ $t("experiences.renault.dates") }} ·
                       <span class="exp-renault__company">Renault ElectriCity — Maubeuge</span>
                     </p>
                   </div>
@@ -248,14 +238,14 @@
                   <img
                     class="exp-renault__media-img no-grayscale"
                     src="https://assets.renaultgroup.com/uploads/2024/11/maubeuge-1024x619.png"
-                    alt="Vue aérienne du site Renault ElectriCity à Maubeuge"
+                    :alt="$t('experiences.renault.mediaAlt')"
                     width="1024"
                     height="619"
                     loading="lazy"
                     decoding="async"
                   />
                   <figcaption class="exp-renault__media-cap">
-                    Site Renault ElectriCity — Maubeuge · source&nbsp;
+                    {{ $t("experiences.renault.mediaCaptionPrefix") }}&nbsp;
                     <a
                       href="https://www.renaultgroup.com"
                       target="_blank"
@@ -268,33 +258,30 @@
                 <div class="exp-renault__body">
                   <div class="exp-renault__intro">
                     <p class="exp-renault__lead">
-                      <strong class="exp-renault__strong">Mission principale.</strong>
-                      Développement d'un affichage du rendement des unités, avec une visualisation
-                      en temps réel des indicateurs de production (OEE / TRS) sur les lignes.
+                      <strong class="exp-renault__strong">{{ $t("experiences.renault.missionTitle") }}</strong>
+                      {{ $t("experiences.renault.missionText") }}
                     </p>
                     <p class="exp-renault__lead">
-                      <strong class="exp-renault__strong">Back &amp; intégration.</strong>
-                      Logique métier avec Symfony 5, connexion aux logiciels internes de l’usine,
-                      données fiables pour le pilotage.
+                      <strong class="exp-renault__strong">{{ $t("experiences.renault.backTitle") }}</strong>
+                      {{ $t("experiences.renault.backText") }}
                     </p>
                   </div>
 
-                  <ul class="exp-renault__highlights" aria-label="Points marquants">
+                  <ul class="exp-renault__highlights" :aria-label="$t('experiences.renault.highlightsAria')">
                     <li>
-                      Tableaux de bord opérateurs mis à jour sans perturber la cadence des lignes.
+                      {{ $t("experiences.renault.highlight1") }}
                     </li>
                     <li>
-                      Données brutes progressivement transformées en indicateurs exploitables par la
-                      hiérarchie d’atelier.
+                      {{ $t("experiences.renault.highlight2") }}
                     </li>
                   </ul>
 
                   <footer class="exp-renault__footer">
-                    <p class="exp-renault__stack-head">Technologies &amp; contexte</p>
-                    <ul class="pills pills--renault" aria-label="Technos">
+                    <p class="exp-renault__stack-head">{{ $t("experiences.renault.stackHead") }}</p>
+                    <ul class="pills pills--renault" :aria-label="$t('experiences.renault.techAria')">
                       <li>Symfony 5</li>
                       <li>OEE / TRS</li>
-                      <li>Contexte usine</li>
+                      <li>{{ $t("experiences.renault.contextLabel") }}</li>
                     </ul>
                   </footer>
                 </div>
@@ -304,13 +291,13 @@
         </div>
       </section>
 
-      <section class="section section--homecta" aria-label="Navigation">
+      <section class="section section--homecta" :aria-label="$t('subnav.linkedPages')">
         <PageSubnav
-          aria-label="Pages liées"
+          :aria-label="$t('subnav.linkedPages')"
           prev-to="/a-propos"
-          prev-label="← À propos"
+          :prev-label="$t('subnav.aboutPrev')"
           next-to="/formations"
-          next-label="Formations →"
+          :next-label="$t('subnav.formationsNext')"
         />
       </section>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div :class="['site', bodyClass].filter(Boolean)">
-    <a class="skip-link" href="#main">Aller au contenu</a>
+    <a class="skip-link" href="#main">{{ $t("layout.skipToContent") }}</a>
     <SiteHeader />
     <router-view />
     <SiteFooter />

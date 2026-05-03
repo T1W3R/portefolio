@@ -1,0 +1,331 @@
+{
+  "common": {
+    "portfolio": "Portfolio",
+    "name": "Timothe Werquin",
+    "firstName": "Timothe",
+    "lastName": "Werquin",
+    "linkedin": "LinkedIn profile",
+    "github": "GitHub",
+    "downloadCv": "Download my resume (PDF)",
+    "contactMe": "Contact me",
+    "aboutMe": "About me",
+    "skills": "My skills",
+    "formations": "My education",
+    "seeSite": "Visit website",
+    "language": "Language",
+    "languageFr": "French",
+    "languageEn": "English"
+  },
+  "meta": {
+    "titleSuffix": "Timothe Werquin"
+  },
+  "routes": {
+    "defaultTitle": "Home",
+    "home": {
+      "title": "Home",
+      "description": "Full stack developer, Data, AI — Timothe Werquin's portfolio."
+    },
+    "about": {
+      "title": "About",
+      "description": "Profile, values, and way of working — Timothe Werquin."
+    },
+    "experiences": {
+      "title": "Experience",
+      "description": "Professional experience at Elonet and Renault — full stack developer, Timothe Werquin."
+    },
+    "formations": {
+      "title": "Education",
+      "description": "Epitech, EPSI, BTS SIO, baccalaureate — Timothe Werquin's academic path."
+    },
+    "competences": {
+      "title": "Skills",
+      "description": "Technical stack, soft skills, and languages — Timothe Werquin."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Timothe Werquin — email, phone, LinkedIn, GitHub, Lille."
+    }
+  },
+  "layout": {
+    "skipToContent": "Skip to content"
+  },
+  "nav": {
+    "main": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "experiences": "Experience",
+    "formations": "Education",
+    "competences": "Skills",
+    "contact": "Contact",
+    "backHome": "Back to home",
+    "openMenu": "Open menu"
+  },
+  "footer": {
+    "city": "Lille, France"
+  },
+  "home": {
+    "heroAria": "Introduction",
+    "kicker": "Software development engineer",
+    "taglineDev": "Full Stack Developer",
+    "metaAria": "Contact details",
+    "photoPlaceholderAria": "Portrait space (photo to add)",
+    "scrollAria": "Scroll to Explore the portfolio",
+    "whoTitle": "Who am I ?",
+    "intro": "Each page highlights a part of my journey: professional experience, education, skills, and a direct way to reach me. I enjoy building useful tools, working with clear scope, and staying aligned with real team needs.",
+    "exploreTitle": "Explore the portfolio",
+    "exploreLede": "Modular sections — almost like an editorial dashboard.",
+    "cards": {
+      "aboutEyebrow": "Profile & values",
+      "aboutTitle": "About",
+      "aboutHint": "Who I am, how I work, and what drives me.",
+      "formationsEyebrow": "Academic path",
+      "formationsTitle": "Education",
+      "formationsHint": "Epitech, EPSI, BTS, baccalaureate, specializations.",
+      "expEyebrow": "Missions & contexts",
+      "expTitle": "Professional experience",
+      "expHint": "Elonet, Renault, stack details and responsibilities.",
+      "skillsEyebrow": "Tech & people",
+      "skillsTitle": "Skills",
+      "skillsHint": "Tech, soft skills, languages, interests.",
+      "contactEyebrow": "Let's talk",
+      "contactTitle": "Contact",
+      "contactHint": "Email, phone, and quick contact options."
+    },
+    "cta": {
+      "bodyStart": "Looking for ",
+      "strongTools": "practical tools",
+      "middle": " and ",
+      "strongImpact": "user impact",
+      "bodyEnd": " — from data to frontend, from agility to quality. If you have a role, a project, or an idea, let's talk on the Contact page.",
+      "button": "Get in touch"
+    }
+  },
+  "about": {
+    "hero": {
+      "kicker": "Profile & values",
+      "titleLine1": "About",
+      "titleLine2": "me",
+      "tagline": "Agility, product mindset, sport & performance — the thread that guides my work."
+    },
+    "actions": {
+      "experiences": "See my experience"
+    },
+    "stripe": {
+      "title": "From field to backlog",
+      "text": "The same standards as in a WOD or sprint review: measurable progress, consistency, and clear communication. I like everyone to know where we are going — and why."
+    },
+    "bio": {
+      "eyebrow": "Bio",
+      "title": "My introduction",
+      "lede": "Developer focused on impact and collaboration — from user need to deployment.",
+      "text": "Software development engineer passionate about sport and performance. As a full stack developer (Python, PHP, React), I grew in agile practices at Elonet: rigor, autonomy, and team spirit. I enjoy building useful tools from discovery to deployment, and helping make sport accessible to everyone when context allows."
+    },
+    "values": {
+      "aria": "Core values",
+      "practiceLabel": "Practice",
+      "practiceText": "Agile methods — Scrum, short iterations",
+      "qualityLabel": "Quality",
+      "qualityText": "Product, code, tests",
+      "horizonLabel": "Horizon",
+      "horizonText": "Data, AI, industrialization"
+    },
+    "method": {
+      "eyebrow": "Method",
+      "title": "How I work",
+      "lede": "Transparency, proactivity, feedback — in three steps.",
+      "aria": "Work principles",
+      "step1Title": "Clarify the need",
+      "step1Text": "Workshops, questions, prioritization: before writing code, I align expected value with stakeholders.",
+      "step2Title": "Deliver with confidence",
+      "step2Text": "Progressive rollouts, reviews, and lightweight documentation: the team and users stay aligned.",
+      "step3Title": "Measure the outcome",
+      "step3Text": "Metrics, field feedback, adjustments: continuous improvement is part of the job."
+    },
+    "passions": {
+      "title": "Interests",
+      "eyebrow": "Personal",
+      "text": "A visual section dedicated to personal photos that tell more about my interests alongside my professional journey.",
+      "carouselAria": "Interests carousel",
+      "placeholder": "Photo to add",
+      "prevAria": "Previous slide",
+      "dotsAria": "Go to a slide",
+      "nextAria": "Next slide",
+      "seeSlide": "View {title}"
+    },
+    "interests": {
+      "sportTitle": "Sport",
+      "sportText": "Strength training, running, hiking, consistency, and progression.",
+      "sportAlt": "Sport photo",
+      "techTitle": "Tech & creativity",
+      "techText": "Web/mobile development, product monitoring, and interface design.",
+      "techAlt": "Development photo",
+      "cultureTitle": "Culture & leisure",
+      "cultureText": "Formula 1, cinema, and video games.",
+      "cultureAlt": "Leisure photo",
+      "engagementTitle": "Community",
+      "engagementText": "Volunteer first responder at Croix-Blanche",
+      "engagementAlt": "Community and music photo",
+      "musicTitle": "Music",
+      "musicText": "Self-taught in singing, guitar, bass, ukulele, and piano.",
+      "musicAlt": "Community and music photo"
+    }
+  },
+  "experiences": {
+    "hero": {
+      "kicker": "Professional journey",
+      "line1": "Professional",
+      "line2": "experience",
+      "tagline": "Apprenticeship and industrial internship — Elonet & Renault. Agile missions, business modules, and real-time production."
+    },
+    "stripe": {
+      "title": "Two contexts",
+      "text": "At Elonet: short cycles, B2B clients, products around Dolibarr and custom interfaces. At Renault: factory constraints, production data, Symfony, and reliability requirements."
+    },
+    "head": {
+      "eyebrow": "Details",
+      "title": "Choose a mission",
+      "lede": "Switch between a long apprenticeship (Elonet) and an industrial internship (Renault)."
+    },
+    "tabsAria": "Choose an experience",
+    "elonet": {
+      "eyebrow": "Apprenticeship · Agile · Business products",
+      "title": "Full stack developer — apprentice",
+      "dates": "Jan. 2023 — Feb. 2026",
+      "evolutionTitle": "Growth within the company.",
+      "evolutionText": "I first joined for an end-of-study BTS SIO internship, then was hired as a full stack developer on a fixed-term contract during the following holidays. Eager to continue, I then joined an apprenticeship program to pursue my studies.",
+      "internalTitle": "Internal projects.",
+      "internalText": "Business tools in an agile team; Vue.js & React interfaces; Python & PHP backends; CRM modules for Dolibarr — the same product focus from backlog to deployment.",
+      "clientTitle": "Client projects.",
+      "clientText": "Custom solutions from scoping to deployment; pair work or autonomy, with clear visibility on deadlines and delivery quality.",
+      "projectsTitle": "Visible online deliveries",
+      "project1Desc": "PHP modules for Dolibarr for external platform clients — business needs, integrations, and maintainable deliveries.",
+      "project2Desc": "Autonomous mission: direct client exchanges, scoping, and delivery — first context where I led the client relationship end to end.",
+      "noteTitle": "Note.",
+      "noteText": "Two other deliveries can no longer be shown online: client liquidation and hosting termination — former URLs unavailable.",
+      "stackHead": "Main stack",
+      "stackLine": "Python (Django, Flask), PHP (Laravel, Symfony), React, Vue.js, SQL",
+      "techAria": "Tech stack"
+    },
+    "renault": {
+      "eyebrow": "Internship · IT / assembly service · Real time",
+      "title": "Full stack developer — intern",
+      "dates": "May 23 — Jul. 1, 2022 · 6 weeks",
+      "mediaAlt": "Aerial view of Renault ElectriCity in Maubeuge",
+      "mediaCaptionPrefix": "Renault ElectriCity site — Maubeuge · source",
+      "missionTitle": "Main mission.",
+      "missionText": "Built a unit efficiency display with real-time visualization of production indicators (OEE / TRS) on the lines.",
+      "backTitle": "Backend & integration.",
+      "backText": "Business logic with Symfony 5, connections to internal factory software, and reliable data for operations steering.",
+      "highlightsAria": "Highlights",
+      "highlight1": "Operator dashboards updated without disrupting line cadence.",
+      "highlight2": "Raw data progressively turned into indicators usable by workshop management.",
+      "stackHead": "Technologies & context",
+      "contextLabel": "Factory context",
+      "techAria": "Tech stack"
+    }
+  },
+  "formations": {
+    "hero": {
+      "kicker": "Education path",
+      "title": "Education",
+      "tagline": "From high school to MSc — science, development, then data & AI. Program details are available on each school's website; links below point to the relevant pages."
+    },
+    "stripe": {
+      "title": "A continuous path",
+      "text": "Each card links a place (sector or campus photo), the key details that belong on your resume, and two exits: the program sheet for curriculum details, and the school site for campus and admissions."
+    },
+    "head": {
+      "eyebrow": "Path",
+      "title": "Degrees & locations",
+      "lede": "Click the labels to open official sources — no need to duplicate everything here."
+    },
+    "listAria": "Education list",
+    "officialSource": "Program (official source)",
+    "school": "Institution",
+    "certsHead": {
+      "eyebrow": "Add-ons",
+      "title": "Other certifications",
+      "lede": "Certifications in cybersecurity, aeronautics, and first aid."
+    },
+    "certsAria": "Other certifications list",
+    "items": {
+      "mscTitle": "Professional MSc — Big Data & AI",
+      "epsiTitle": "Professional title: application design and development — level II (NSF 326t)",
+      "btsTitle": "BTS SIO — SLAM specialization",
+      "bacTitle": "Baccalaureate — Mathematics and Engineering Sciences specialties"
+    },
+    "certifications": {
+      "secnum": "Cybersecurity certificate",
+      "bia": "Aeronautics initiation certificate",
+      "pse2": "First responder diploma level 2",
+      "pse1": "First responder diploma level 1",
+      "psc1": "Civic prevention and first aid level 1"
+    }
+  },
+  "competences": {
+    "hero": {
+      "kicker": "Capabilities",
+      "title": "Skills",
+      "tagline": "Technical, interpersonal, and language skills: a quick view of the tools I use and how I work."
+    },
+    "stripe": {
+      "title": "What I bring",
+      "text": "Product-oriented stack, team collaboration, and a data/AI foundation: this section goes from practical tools to context (languages, soft skills)."
+    },
+    "head": {
+      "eyebrow": "Details",
+      "title": "Stack & profile",
+      "lede": "A quick read of technical tools, collaboration strengths, and languages used in my projects."
+    },
+    "stackTitle": "Stack & tools",
+    "softTitle": "Soft skills",
+    "langsTitle": "Languages",
+    "soft": {
+      "team": "Team spirit",
+      "perfectionist": "Perfectionist mindset",
+      "methodic": "Methodical, autonomous, detail-oriented",
+      "initiative": "Initiative, commitment, perseverance, curiosity"
+    },
+    "langs": {
+      "french": "French",
+      "frenchLevel": "spoken (native)",
+      "english": "English",
+      "englishLevel": "spoken",
+      "spanish": "Spanish",
+      "spanishLevel": "understood"
+    }
+  },
+  "contact": {
+    "hero": {
+      "kicker": "Let's connect",
+      "title": "Contact me",
+      "tagline": "Available to discuss opportunities, questions, or collaboration."
+    },
+    "writeMe": "Write to me",
+    "stripe": {
+      "title": "Let's keep it practical",
+      "text": "You can reach me by email, phone, LinkedIn, or GitHub. I usually reply within a few business days."
+    },
+    "head": {
+      "eyebrow": "Contact details",
+      "title": "Get in touch",
+      "lede": "One message is enough. I'll get back to you as soon as possible."
+    },
+    "directTitle": "Direct channels",
+    "directText": "Email first, then phone and professional networks depending on your preference.",
+    "formInfo": "Would you prefer an embedded contact form (server-side sending) instead of client email? It can be added server-side (mail, validation, anti-spam) whenever you want."
+  },
+  "subnav": {
+    "linkedPages": "Related pages",
+    "aboutPrev": "← About",
+    "homePrev": "← Home",
+    "expPrev": "← Experience",
+    "formationsPrev": "← Education",
+    "skillsPrev": "← Skills",
+    "formationsNext": "Education →",
+    "skillsNext": "Skills →",
+    "contactNext": "Contact →",
+    "homeNext": "Home →",
+    "experiencesNext": "Experience →"
+  }
+}
