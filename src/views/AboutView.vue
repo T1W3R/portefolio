@@ -15,7 +15,7 @@
 
   <IntroBandSection
     title-id="about-stripe-title"
-    title="Du terrain aux backlog"
+    title="Du terrain au backlog"
     stripe-class="about-page__stripe"
     body-class="page__stripe-body"
   >
@@ -151,12 +151,12 @@
           <button
             type="button"
             class="passions-carousel__btn"
-            aria-label="Slide précédent"
+            aria-label="Diapositive précédente"
             @click="prevSlide"
           >
             ←
           </button>
-          <div class="passions-carousel__dots" role="tablist" aria-label="Aller à une slide">
+          <div class="passions-carousel__dots" role="tablist" aria-label="Aller à une diapositive">
             <button
               v-for="(interest, idx) in interests"
               :key="`dot-${interest.title}`"
@@ -172,7 +172,7 @@
           <button
             type="button"
             class="passions-carousel__btn"
-            aria-label="Slide suivant"
+            aria-label="Diapositive suivante"
             @click="nextSlide"
           >
             →
@@ -225,7 +225,7 @@ const interests = [
   },
   {
     title: "Engagement",
-    text: "Benevole Secouriste Croix-Blanche",
+    text: "Secouriste bénévole à la Croix-Blanche",
     img: "/images/interests/secourisme.jpeg",
     alt: "Photo engagement et musique",
   },

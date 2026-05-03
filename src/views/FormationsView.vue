@@ -199,11 +199,11 @@ const certifications = [
   },
   {
     acronym: "PSE2",
-    label: "Brevet d’Équipier Secouriste 2nd niveau",
+    label: "Brevet d’Équipier Secouriste niveau 2",
   },
   {
     acronym: "PSE1",
-    label: "Brevet d’Équipier Secouriste 1er niveau",
+    label: "Brevet d’Équipier Secouriste niveau 1",
   },
   {
     acronym: "PSC1",

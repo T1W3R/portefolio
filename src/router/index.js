@@ -13,7 +13,7 @@ const routes = [
         meta: {
           title: "Accueil",
           description:
-            "Développeur full stack, Data, IA — portefolio de Timothé Werquin.",
+            "Développeur full stack, Data, IA — portfolio de Timothé Werquin.",
           bodyClass: "site--home",
         },
       },

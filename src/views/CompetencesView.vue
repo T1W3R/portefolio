@@ -8,7 +8,7 @@
   >
     <template #actions>
       <router-link class="btn btn--primary" to="/contact">Me contacter</router-link>
-      <router-link class="btn btn--ghost" to="/a-propos">A propos de moi</router-link>
+      <router-link class="btn btn--ghost" to="/a-propos">À propos de moi</router-link>
     </template>
   </StandardPageHero>
 

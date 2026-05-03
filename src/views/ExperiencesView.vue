@@ -101,7 +101,7 @@
                   <div class="exp-elonet__intro">
                     <p class="exp-elonet__lead">
                       <strong class="exp-elonet__strong">Évolution au sein de l'entreprise.</strong>
-                      Étant d'abord entré pour un stage de fin de BTS SIO, j'ai ensuite été embauché en tant que développeur full stack pour un CDD pendant les vacances qui ont suivi. Désireux de poursuivre l'aventure, j'ai été embauché en alternance afin de continuer mes études jusqu'à la fin de l'entreprise.
+                      Étant d'abord entré pour un stage de fin de BTS SIO, j'ai ensuite été embauché en tant que développeur full stack pour un CDD pendant les vacances qui ont suivi. Désireux de poursuivre l'aventure, j'ai été embauché en alternance afin de continuer mes études jusqu'à la fin de celles-ci.
                     </p>
                     <p class="exp-elonet__lead">
                       <strong class="exp-elonet__strong">Projets internes.</strong>

@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer">
     <p class="site-footer__p">
-      Timothé Werquin &middot; Lille, France &middot; Portefolio
+      Timothé Werquin &middot; Lille, France &middot; Portfolio
       {{ year }}
     </p>
     <p class="site-footer__sitemap">

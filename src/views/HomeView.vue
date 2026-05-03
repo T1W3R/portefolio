@@ -14,7 +14,7 @@
             >Me contacter</router-link
           >
           <router-link class="btn btn--ghost" to="/a-propos"
-            >A propos de moi</router-link
+            >À propos de moi</router-link
           >
         </div>
         <ul class="site-hero__meta" aria-label="Coordonnées">
@@ -90,7 +90,7 @@
     <a
       class="site-hero__scroll"
       href="#explore"
-      aria-label="Faire défiler vers Explorer le portefolio"
+      aria-label="Faire défiler vers Explorer le portfolio"
     >
       <span class="site-hero__scroll-line" aria-hidden="true" />
     </a>
@@ -105,13 +105,13 @@
       <div class="home-intro-band__grid">
         <div class="home-intro-band__inset">
           <p class="home-intro-band__p">
-            Chaque page détaille un pan de mon parcours : expériences pro, formation,
+            Chaque page détaille un pan de mon parcours : expériences pro, formations,
             compétences, et un fil direct pour m’écrire. J’aime les outils utiles, le
             travail bien cadré, et le lien avec les besoins réels des équipes.
           </p>
           <br><br><br>
           <div class="home-intro-band__actions">
-            <a class="btn btn--outline" href="/CV_Werquin_Timothé.pdf" download>
+            <a class="btn btn--outline" href="/CV_Werquin_Timothé.pdf" target="_blank">
               Télécharger mon CV (PDF)
             </a>
           </div>
@@ -132,7 +132,7 @@
       >
         <SectionHeadBlock
           title-id="explore-title"
-          title="Explorer le portefolio"
+          title="Explorer le portfolio"
           lede="Rubriques modulaires — un peu comme un tableau de bord éditorial."
         />
         <ul class="home-bento" role="list">
@@ -157,7 +157,7 @@
           <li class="home-bento__cell home-bento__cell--exp">
             <router-link to="/experiences" class="home-bento__card home-bento__card--accent">
               <span class="home-bento__eyebrow">Missions &amp; contextes</span>
-              <span class="home-bento__title">Expériences professionnel</span>
+              <span class="home-bento__title">Expériences professionnelles</span>
               <span class="home-bento__hint"
                 >Elonet, Renault, stacks et responsabilités détaillées.</span
               >
@@ -168,7 +168,7 @@
               <span class="home-bento__eyebrow">Stack &amp; humain</span>
               <span class="home-bento__title">Compétences</span>
               <span class="home-bento__hint"
-                >Technos, soft skills, langues, centre d’intérêt.</span
+                >Technos, soft skills, langues, centres d’intérêt.</span
               >
             </router-link>
           </li>
