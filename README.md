@@ -39,16 +39,14 @@ Le ton général — visible dans les textes du site — privilégie l’**utili
 
 ## Stack technique
 
-| Couche | Choix |
-|--------|-------|
-| **Framework** | [Vue 3](https://vuejs.org/) (Composition API, `<script setup>`) |
-| **Routing** | [Vue Router 4](https://router.vuejs.org/) — historique HTML5, lazy-loading des vues |
-| **i18n** | [Vue I18n 11](https://vue-i18n.intlify.dev/) — FR / EN, persistance `localStorage` |
-| **Build** | [Vite 6](https://vitejs.dev/) — dev server rapide, bundle optimisé |
+| Couche | Technologies |
+|--------|--------------|
+| **Front-end** | **[Vue.js](https://vuejs.org/)** (Vue 3, Composition API, `<script setup>`), [Vue Router 4](https://router.vuejs.org/), [Vue I18n 11](https://vue-i18n.intlify.dev/), [Vite 6](https://vitejs.dev/) |
+| **Back-end** | **[Spring Boot](https://spring.io/projects/spring-boot)** (écosystème Java / Spring) |
 | **Styles** | CSS custom (variables, grilles, composants) — polices Google Fonts (Archivo Black, Inter, Montserrat) |
 | **Hébergement cible** | Site statique (`dist/`) — compatible nginx, GitHub Pages, Netlify, etc. |
 
-**Pas de backend** pour l’instant : le contact passe par mail, téléphone et réseaux sociaux. Un formulaire côté serveur pourra être ajouté ultérieurement si besoin.
+Ce dépôt ne contient pour l’instant que le **front-end** (SPA Vue.js). Le contact passe par mail, téléphone et réseaux sociaux ; une API **Spring Boot** pourra être branchée ultérieurement (formulaire, validation, envoi de mails).
 
 ---
 
